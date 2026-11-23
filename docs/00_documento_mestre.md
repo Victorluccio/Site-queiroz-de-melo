@@ -51,6 +51,7 @@ D18 (23/11/2026): protótipo com ilustrações no lugar das fotos, porque o ambi
 D19 (23/11/2026): versão 1 do protótipo reprovada por ter cara de IA. Versão 2 refeita com padrões de sites de alto padrão do Brasil e só com fotos reais.
 D20 (23/11/2026): a versão 2 carrega as fotos direto do site atual e é revisada abrindo o arquivo no navegador.
 D21 (23/11/2026): fotos enviadas pelo Victor por print e incluídas no protótipo, que volta a ser revisado pelo link privado.
+D22 (23/11/2026): versão 3 do protótipo com a marca e as cores do cliente, tipografia Marcellus e Jost, e empreendimentos em camadas de tela cheia.
 
 ## Pontos em aberto
 
@@ -70,4 +71,4 @@ Para confirmar com o cliente (não travam o demonstrativo):
 
 ## Próximo passo
 
-Victor revisar a versão 2 do protótipo no link privado e aprovar a etapa 07.
+Receber os logos dos três empreendimentos, incluir no protótipo e revisar a versão 3.

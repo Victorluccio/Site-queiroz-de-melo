@@ -55,3 +55,16 @@ Pontos vistos nas fotos e que não estão no texto do site atual (confirmar com 
 1. Estância Queiroz de Melo: capela e coreto.
 2. Estância das Águas: salão de festas e fonte.
 3. Estância Casa Real: fotos aéreas mostram a divisão das quadras, que podem servir de base para a implantação.
+
+## Versão 3 (23/11/2026)
+
+Pedido do Victor: usar a marca do cliente, dar valor a cada camada, visual arrojado e tipografia sem cara de IA.
+Mudanças:
+1. Topo no padrão do site da empresa: logo da Queiroz de Melo, menu com marcador verde, telefone e ícones.
+2. Cores tiradas do brasão: verde #00451a, ouro #d7ae00 e vermelho só no logo.
+3. Títulos em Marcellus, letra romana de inscrição, da mesma família visual das letras do logo. Texto em Jost. Rótulos em caixa alta espaçada.
+4. Camadas: cada empreendimento é uma lâmina de tela cheia que desliza sobre a anterior ao rolar, com foto, logo, status, metragem e endereço.
+5. Bloco da empresa em verde com a foto da portaria saindo da faixa, criando profundidade.
+6. Cada empreendimento tem espaço para o próprio logo. Enquanto os logos não chegam, o nome aparece composto em Marcellus.
+
+Logo da Queiroz de Melo tirado do print do site atual, com fundo removido. Para o site final, pedir o arquivo original em vetor.

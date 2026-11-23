@@ -6,237 +6,258 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Queiroz de Melo Protótipo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Archivo:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500&display=swap">
 <style>
-/* VOICE  alto padrão silencioso: pouco texto, muita foto, nada chamativo
-   IDEA   catálogo editorial de arquitetura e paisagismo
-   PICTURE fotos reais dos empreendimentos em tela cheia, sem moldura
-   COLOUR branco, quase-preto e cinza pedra; a cor vem da foto
-   TYPE   Libre Caslon Display nos títulos, Archivo leve no texto
-   LAYOUT grade editorial assimétrica de 12 colunas; índice de empreendimentos em linhas; no celular, uma coluna */
-:root{color-scheme:light;--bg:#fff;--ink:#141414;--mute:#6f6c66;--line:#e2dfd9;--stone:#ece9e3;--dark:#141414}
+/* VOICE  alto padrão do interior, com a marca da casa à frente
+   IDEA   camadas: cada seção é uma lâmina que desliza sobre a anterior, como pranchas de um book de lançamento
+   PICTURE fotos reais em tela cheia; cada empreendimento ganha sua própria lâmina com logo, foto e dados
+   COLOUR as cores do brasão: verde #00451a dominante, ouro #d7ae00 em filetes, vermelho só no logo; branco e marfim
+   TYPE   Marcellus (romana de inscrição, parente das letras do logo) nos títulos; Jost no texto e nos rótulos
+   LAYOUT topo branco como o site da empresa; lâminas de tela cheia empilhadas; ficha técnica e mosaico nas páginas */
+:root{--g:#00451a;--g2:#003313;--gold:#d7ae00;--ink:#16211a;--mute:#66706a;--ivory:#f6f3ec;--line:#e3dfd5;--hd:88px}
 *{box-sizing:border-box;min-width:0}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.6 Archivo,system-ui,sans-serif;overflow-x:clip}
+html{scroll-padding-top:var(--hd)}
+body{margin:0;background:#fff;color:var(--ink);font:300 17px/1.65 Jost,system-ui,sans-serif;overflow-x:clip}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-h1,h2,h3,.serif{font-family:"Libre Caslon Display",Georgia,serif;font-weight:400;line-height:1.02;letter-spacing:-.01em;margin:0}
+h1,h2,h3,.disp{font-family:Marcellus,"Trajan Pro",Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:.005em;margin:0}
 p{margin:0 0 1em}
-.g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,32px);padding-inline:max(4vw,16px)}
-.sec{padding-block:clamp(72px,11vw,160px)}
-.lbl{font-size:13px;color:var(--mute);font-weight:400}
-.ph{position:relative;overflow:hidden;background:var(--stone)}
+.cap{font:500 12px/1.4 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.w{max-width:1320px;margin:0 auto;padding-inline:max(4vw,18px)}
+.ph{position:relative;overflow:hidden;background:#cfd3cc}
 .ph img{width:100%;height:100%;object-fit:cover}
-/* topo */
-.top{position:fixed;inset:0 0 auto;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:22px max(4vw,16px);color:#fff;mix-blend-mode:difference}
-.mark{font-family:"Libre Caslon Display",Georgia,serif;font-size:22px;line-height:1}
-.mbtn{font:400 15px Archivo,sans-serif;background:none;border:0;color:inherit;cursor:pointer;padding:12px 0;min-height:44px}
-.menu{position:fixed;inset:0;z-index:50;background:var(--dark);color:#f2f0ec;display:none;padding:22px max(4vw,16px);overflow:auto}
-.menu.on{display:grid;grid-template-rows:auto 1fr auto}
-.menu .bar{display:flex;justify-content:space-between;align-items:center}
-.menu nav{align-self:center;display:grid;gap:clamp(4px,1vw,10px);padding-block:40px}
-.menu nav a{font-family:"Libre Caslon Display",Georgia,serif;font-size:clamp(40px,7vw,96px);line-height:1.05;color:#f2f0ec}
-.menu nav a:hover{color:#9c9890}
-.menu .foot{display:flex;gap:40px;flex-wrap:wrap;font-size:15px;color:#b5b1aa}
-/* capa */
-.cover{position:relative;height:100svh;min-height:560px;color:#fff}
-.cover .ph{position:absolute;inset:0;background:#3a3a36}
-.cover .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,0) 55%)}
-.cover .txt{position:absolute;left:0;right:0;bottom:clamp(32px,6vw,72px)}
-.cover h1{grid-column:1/span 9;font-size:clamp(46px,7.4vw,118px)}
-.cover p{grid-column:1/span 4;margin-top:24px;font-size:17px;color:#e9e6e0}
-.cover .scroll{grid-column:11/span 2;align-self:end;text-align:right;font-size:14px;color:#e9e6e0}
-/* declaração */
-.state .lbl{grid-column:1/span 3}
-.state .big{grid-column:4/span 8;font-family:"Libre Caslon Display",Georgia,serif;font-size:clamp(28px,3.4vw,50px);line-height:1.15}
-.state .sub{grid-column:4/span 4;margin-top:40px;color:var(--mute)}
-.state .sub2{grid-column:8/span 4;margin-top:40px;color:var(--mute)}
-.state a.more{display:inline-block;margin-top:8px;border-bottom:1px solid currentColor;padding-bottom:2px;color:var(--ink)}
-/* índice */
-.idx .head{grid-column:1/-1;display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--ink);padding-bottom:18px}
-.idx h2{font-size:clamp(34px,4vw,60px)}
-.row{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,2fr) minmax(0,3fr) minmax(0,2fr);gap:24px;align-items:center;padding:clamp(22px,3vw,40px) 0;border-bottom:1px solid var(--line);position:relative}
-.row .nm{font-family:"Libre Caslon Display",Georgia,serif;font-size:clamp(30px,3.6vw,56px);line-height:1}
-.row .go{text-align:right;font-size:15px}
-.row .thumb{display:none}
-.row:hover .nm{font-style:italic}
-.peek{position:fixed;z-index:30;width:320px;aspect-ratio:4/5;pointer-events:none;opacity:0;transition:opacity .25s}
-.peek.on{opacity:1}
-/* destaque */
-.feat .big{grid-column:1/span 8;aspect-ratio:4/3}
-.feat .side{grid-column:9/span 4;display:flex;flex-direction:column;justify-content:space-between;gap:32px}
-.feat .side .ph{aspect-ratio:3/4}
-.feat h3{font-size:clamp(28px,2.8vw,42px);margin:10px 0 14px}
-/* confiança */
-.trust{background:var(--stone)}
-.trust h2{grid-column:1/span 5;font-size:clamp(34px,4vw,60px)}
-.trust ul{grid-column:7/span 6;list-style:none;margin:0;padding:0}
-.trust li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:24px;padding:22px 0;border-top:1px solid #cfcbc3}
-.trust li b{font-weight:400}
-.trust li span{color:var(--mute)}
-/* contato */
-.cta h2{grid-column:1/span 10;font-size:clamp(46px,7vw,112px)}
-.cta .c1{grid-column:1/span 3;margin-top:56px}
-.cta .c2{grid-column:4/span 3;margin-top:56px}
-.cta .c3{grid-column:7/span 3;margin-top:56px}
-.cta .c4{grid-column:10/span 3;margin-top:56px}
-.ln{display:inline-block;border-bottom:1px solid currentColor;padding-bottom:2px}
-footer{background:var(--dark);color:#d9d6d0;padding-top:72px;padding-bottom:28px}
-footer .wm{grid-column:1/-1;font-family:"Libre Caslon Display",Georgia,serif;font-size:clamp(52px,11vw,176px);line-height:.9;color:#f2f0ec}
-footer .f{grid-column:span 3;margin-top:48px;font-size:15px}
-footer .f p{margin:0 0 6px}
-footer .note{grid-column:1/-1;margin-top:56px;padding-top:18px;border-top:1px solid #333;font-size:13px;color:#8c8880}
-/* página de empreendimento */
-.spec{grid-column:1/span 5}
-.spec h1{font-size:clamp(40px,5vw,76px);margin-bottom:28px}
-.spec dl{margin:0;border-top:1px solid var(--ink)}
-.spec dl div{display:grid;grid-template-columns:8em minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
-.spec dt{color:var(--mute);font-size:15px}
-.spec dd{margin:0}
-.tbd{color:var(--mute);font-style:italic}
-.intro{grid-column:7/span 6;align-self:end}
-.intro .serif{font-size:clamp(26px,2.8vw,40px);line-height:1.2;margin-bottom:24px}
-.laz h2{grid-column:1/span 4;font-size:clamp(32px,3.4vw,52px)}
-.laz ul{grid-column:6/span 7;list-style:none;margin:0;padding:0;columns:2;column-gap:40px}
-.laz li{break-inside:avoid;padding:14px 0;border-top:1px solid var(--line)}
-.mos{row-gap:clamp(16px,2vw,32px)}
-.mos .a{grid-column:1/span 7;aspect-ratio:4/3}
-.mos .b{grid-column:8/span 5;aspect-ratio:4/5;align-self:end}
-.mos .c{grid-column:3/span 5;aspect-ratio:1/1}
-.mos .d{grid-column:8/span 5;aspect-ratio:3/2;align-self:start}
-.loc{grid-column:1/span 6}
-.loc2{grid-column:7/span 6}
+.rule{display:block;width:56px;height:1px;background:var(--gold);margin:22px 0}
+header{position:sticky;top:0;z-index:40;background:#fff;height:var(--hd);border-bottom:1px solid transparent;transition:border-color .3s}
+header.sc{border-color:var(--line)}
+.hb{height:100%;display:flex;align-items:center;gap:clamp(20px,4vw,64px)}
+.logo img{height:58px;width:auto}
+nav.main{display:flex;gap:clamp(18px,3vw,48px);margin-right:auto}
+nav.main a{position:relative;font:400 16px Jost,sans-serif;color:#9aa19c;padding:10px 0;transition:color .2s}
+nav.main a:hover,nav.main a.on{color:var(--g)}
+nav.main a.on::after{content:"";position:absolute;left:50%;bottom:-2px;width:14px;height:5px;margin-left:-7px;border-radius:3px;background:var(--g)}
+.tel{font:400 18px Jost,sans-serif;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.soc{display:flex;gap:12px}
+.soc a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;box-shadow:0 2px 12px rgba(0,0,0,.08);background:#fff}
+.soc svg,.tel svg{width:18px;height:18px;fill:var(--ink)}
+.burger{display:none;margin-left:auto;background:none;border:0;font:500 13px Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--g);min-height:44px;cursor:pointer}
+.cover{position:relative;height:calc(100svh - var(--hd));min-height:540px;color:#fff;overflow:hidden}
+.cover .ph{position:absolute;inset:0}
+.cover .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,30,12,.72) 0%,rgba(0,30,12,.25) 55%,rgba(0,0,0,0) 80%)}
+.cover .in{position:absolute;inset:auto 0 clamp(40px,8vh,96px) 0}
+.cover h1{font-size:clamp(44px,6.4vw,104px);max-width:11ch}
+.cover p{max-width:34ch;font-size:18px;color:#e8ece6;margin:0}
+.cover .cap{color:var(--gold)}
+.inst{background:var(--g);color:#eef2ec;position:relative;padding-block:clamp(80px,10vw,150px) 0}
+.inst .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
+.inst h2{font-size:clamp(34px,3.8vw,58px)}
+.inst .cap{color:var(--gold)}
+.inst .txt p{color:#cfd8d1;max-width:46ch}
+.inst .ph{aspect-ratio:16/10;margin-bottom:-120px;box-shadow:0 30px 60px rgba(0,0,0,.25);z-index:2}
+.inst .facts{display:flex;gap:clamp(28px,5vw,72px);flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid rgba(215,174,0,.45)}
+.inst .facts b{display:block;font:400 34px/1 Marcellus,serif;color:#fff;margin-bottom:6px}
+.inst .facts span{font-size:14px;color:#b8c4bb}
+.after-inst{height:120px;background:#fff}
+.stack-head{padding-block:clamp(70px,8vw,120px) clamp(30px,4vw,56px);display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.stack-head h2{font-size:clamp(36px,4.4vw,68px);color:var(--g)}
+.stack-head p{max-width:40ch;color:var(--mute);margin:0}
+.lam{position:sticky;top:var(--hd);height:calc(100svh - var(--hd));min-height:560px;color:#fff;overflow:hidden}
+.lam .ph{position:absolute;inset:0}
+.lam .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,24,10,.85) 0%,rgba(0,24,10,.35) 45%,rgba(0,0,0,.05) 75%)}
+.lam .in{position:absolute;inset:auto 0 clamp(36px,7vh,80px) 0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:end}
+.lock{display:inline-block;border-left:1px solid var(--gold);padding-left:22px}
+.lock .cap{color:var(--gold);display:block;margin-bottom:6px}
+.lock .disp{font-size:clamp(40px,5.6vw,92px);line-height:1}
+.lock img{height:clamp(70px,9vw,120px);width:auto}
+.lam dl{margin:0;display:grid;border-top:1px solid rgba(255,255,255,.3)}
+.lam dl div{display:grid;grid-template-columns:7em minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.lam dt{font:500 12px/1.9 Jost,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#c8d2ca}
+.lam dd{margin:0}
+.lam .tbd{color:#c8d2ca}
+.btn{display:inline-flex;align-items:center;gap:14px;min-height:50px;padding:0 28px;font:500 13px Jost,sans-serif;letter-spacing:.18em;text-transform:uppercase;border:1px solid currentColor;transition:background .25s,color .25s}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#1b1a10}
+.btn.gold:hover{background:#fff;border-color:#fff}
+.btn.line:hover{background:#fff;color:var(--g)}
+.lam .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.dif{background:var(--ivory);position:relative;z-index:5;padding-block:clamp(80px,10vw,140px)}
+.dif h2{font-size:clamp(34px,3.8vw,58px);color:var(--g);max-width:16ch}
+.dif .cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,48px);margin-top:56px}
+.dif .cols div{border-top:1px solid var(--gold);padding-top:22px}
+.dif h3{font-size:24px;color:var(--g);margin-bottom:10px}
+.dif p{color:var(--mute);font-size:16px;margin:0}
+.cta{background:var(--g2);color:#fff;position:relative;z-index:5;padding-block:clamp(80px,10vw,140px)}
+.cta .grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:end}
+.cta h2{font-size:clamp(42px,5.6vw,88px)}
+.cta .cap{color:var(--gold)}
+.cta ul{list-style:none;margin:0;padding:0}
+.cta li{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.cta li span:first-child{font:500 12px/2 Jost,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#a9b8ad}
+footer{background:#001f0b;color:#b8c4bb;position:relative;z-index:5;padding-block:64px 28px;font-size:15px}
+footer .grid{display:grid;grid-template-columns:minmax(0,4fr) repeat(3,minmax(0,2fr));gap:40px}
+footer img{height:64px;width:auto;margin-bottom:18px}
+footer h4{font:500 12px Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+footer p{margin:0 0 8px}
+footer .note{margin-top:48px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:#7f8e84}
+.ehero{position:relative;height:calc(100svh - var(--hd));min-height:560px;color:#fff;overflow:hidden}
+.ehero .ph{position:absolute;inset:0}
+.ehero .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,24,10,.8),rgba(0,0,0,0) 60%)}
+.ehero .in{position:absolute;inset:auto 0 clamp(40px,8vh,90px) 0}
+.ficha{padding-block:clamp(80px,9vw,130px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.ficha h2{font-size:clamp(30px,3.2vw,48px);color:var(--g)}
+.ficha .lead{font:400 clamp(24px,2.4vw,34px)/1.3 Marcellus,serif;color:var(--ink);margin-bottom:20px}
+.ficha dl{margin:28px 0 0;border-top:1px solid var(--g)}
+.ficha dl div{display:grid;grid-template-columns:9em minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.ficha dt{font:500 12px/2 Jost,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+.ficha dd{margin:0}
+.tbd{color:#9aa19c;font-style:italic}
+.mos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(12px,1.6vw,24px)}
+.mos .a{grid-column:1/span 8;grid-row:span 2}
+.mos .b{grid-column:9/span 4;aspect-ratio:4/3}
+.mos .c{grid-column:9/span 4;aspect-ratio:4/3}
+.mos .d{grid-column:1/-1;aspect-ratio:21/8}
+.laz{background:var(--g);color:#eef2ec;margin-top:clamp(80px,9vw,130px);padding-block:clamp(80px,9vw,130px)}
+.laz .grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:56px}
+.laz h2{font-size:clamp(32px,3.4vw,52px)}
+.laz .cap{color:var(--gold)}
+.laz ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px}
+.laz li{padding:16px 0 16px 26px;border-bottom:1px solid rgba(255,255,255,.16);position:relative}
+.laz li::before{content:"";position:absolute;left:0;top:28px;width:12px;height:1px;background:var(--gold)}
+.loc{padding-block:clamp(80px,9vw,130px);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,6vw,96px)}
+.loc h2{font-size:clamp(30px,3.2vw,48px);color:var(--g)}
+.uline{border-bottom:1px solid var(--gold);padding-bottom:3px}
 form{display:grid;gap:22px}
-label{display:grid;gap:4px;font-size:14px;color:var(--mute)}
-input,select,textarea{font:300 17px Archivo,sans-serif;color:var(--ink);background:transparent;border:0;border-bottom:1px solid #b9b5ae;padding:10px 0;border-radius:0;width:100%}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ink)}
-.chk{display:flex;gap:10px;align-items:center;color:var(--ink)}
+label{display:grid;gap:2px;font:500 12px Jost,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+input,select{font:300 17px Jost,sans-serif;color:var(--ink);background:transparent;border:0;border-bottom:1px solid #c9c5bb;padding:10px 0;border-radius:0;width:100%;letter-spacing:0;text-transform:none}
+input:focus,select:focus{outline:none;border-color:var(--g)}
+.chk{display:flex;gap:10px;align-items:center;letter-spacing:0;text-transform:none;font:300 15px Jost,sans-serif;color:var(--ink)}
 .chk input{width:18px;height:18px}
-.send{justify-self:start;font:400 16px Archivo,sans-serif;background:var(--ink);color:#fff;border:0;padding:16px 32px;cursor:pointer;min-height:48px}
+.send{justify-self:start;background:var(--g);color:#fff;border-color:var(--g);cursor:pointer}
 .ok{font-size:15px;color:var(--mute)}
-a:focus-visible,button:focus-visible{outline:1px solid currentColor;outline-offset:4px}
-@media(max-width:900px){
- .g{grid-template-columns:minmax(0,1fr)}
- .g>*{grid-column:1/-1!important}
- .cover .scroll{display:none}
- .state .sub,.state .sub2{margin-top:24px}
- .state .lbl{margin-bottom:20px}
- .row{grid-template-columns:minmax(0,1fr);gap:6px}
- .row .thumb{display:block;aspect-ratio:3/2;margin-bottom:14px}
- .row .go{text-align:left}
- .feat .side{margin-top:24px}
- .trust ul,.laz ul,.intro,.loc2{margin-top:32px}
- .laz ul{columns:1}
- .cta .c1,.cta .c2,.cta .c3,.cta .c4{margin-top:28px}
- .mos .a,.mos .b,.mos .c,.mos .d{aspect-ratio:3/2}
+.page-top{padding-block:clamp(70px,8vw,120px) 40px}
+.page-top h1{font-size:clamp(42px,5.4vw,84px);color:var(--g)}
+a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+.mnav{display:none}
+@media(max-width:1000px){
+ nav.main,.tel,.soc{display:none}.burger{display:block}
+ .mnav.on{display:grid;position:fixed;inset:var(--hd) 0 0;z-index:39;background:#fff;padding:32px max(4vw,18px);align-content:start;gap:8px}
+ .mnav a{font:400 34px Marcellus,serif;color:var(--g);padding:6px 0}
+ .mnav .tel2{margin-top:24px;font-size:18px;color:var(--ink)}
+ .inst .grid,.cta .grid,.ficha,.loc,.laz .grid,.lam .in{grid-template-columns:minmax(0,1fr)}
+ .inst .ph{margin-bottom:-80px}.after-inst{height:80px}
+ .dif .cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+ footer .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-@media(prefers-reduced-motion:no-preference){.cover .ph img{animation:z 14s ease-out both}@keyframes z{from{transform:scale(1.06)}}}
+@media(max-width:600px){
+ :root{--hd:72px}.logo img{height:46px}
+ .lam,.ehero,.cover{min-height:600px}
+ .lam .in{gap:20px}
+ .dif .cols,footer .grid,.laz ul{grid-template-columns:minmax(0,1fr)}
+ .mos .a,.mos .b,.mos .c,.mos .d{grid-column:1/-1;grid-row:auto;aspect-ratio:3/2}
+ .ficha dl div,.lam dl div{grid-template-columns:minmax(0,1fr);gap:0}
+}
+@media(prefers-reduced-motion:no-preference){.cover .ph img,.ehero .ph img{animation:z 16s ease-out both}@keyframes z{from{transform:scale(1.07)}}}
 </style>
 </head>
 <body>
-<header class="top">
-  <a class="mark" href="#home">Queiroz de Melo</a>
-  <button class="mbtn" id="mopen" aria-expanded="false" aria-controls="menu">Menu</button>
+<header id="hd">
+  <div class="w hb">
+    <a class="logo" href="#home"><img src="img/logo-queiroz-de-melo.png" alt="Queiroz de Melo Empreendimentos"></a>
+    <nav class="main">
+      <a href="#home" data-k="home">Home</a>
+      <a href="#sobre" data-k="sobre">Sobre nós</a>
+      <a href="#empreendimentos" data-k="empreendimentos">Empreendimentos</a>
+      <a href="#contato" data-k="contato">Fale conosco</a>
+    </nav>
+    <span class="tel"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>(34) 3821-2727</span>
+    <div class="soc">
+      <a href="https://wa.me/553438212727" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+      <a href="#contato" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3A4.7 4.7 0 1 0 16.7 12 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm6-7.9a1.1 1.1 0 1 1-1.1-1.1A1.1 1.1 0 0 1 18 7.1zM21.9 8.2a5.4 5.4 0 0 0-1.5-3.9 5.4 5.4 0 0 0-3.9-1.5C15 2.7 9 2.7 7.5 2.8a5.4 5.4 0 0 0-3.9 1.5 5.4 5.4 0 0 0-1.5 3.9C2 9.7 2 14.3 2.1 15.8a5.4 5.4 0 0 0 1.5 3.9 5.4 5.4 0 0 0 3.9 1.5c1.5.1 7.5.1 9 0a5.4 5.4 0 0 0 3.9-1.5 5.4 5.4 0 0 0 1.5-3.9c.1-1.5.1-6.1 0-7.6zM19.8 18a3 3 0 0 1-1.7 1.7c-1.2.5-4 .4-6.1.4s-4.9.1-6.1-.4A3 3 0 0 1 4.2 18c-.5-1.2-.4-4-.4-6s-.1-4.9.4-6.1A3 3 0 0 1 5.9 4.2C7.1 3.7 9.9 3.8 12 3.8s4.9-.1 6.1.4a3 3 0 0 1 1.7 1.7c.5 1.2.4 4 .4 6.1s.1 4.8-.4 6z"/></svg></a>
+    </div>
+    <button class="burger" id="bg" aria-expanded="false" aria-controls="mnav">Menu</button>
+  </div>
 </header>
-<div class="menu" id="menu" role="dialog" aria-label="Menu">
-  <div class="bar"><a class="mark" href="#home">Queiroz de Melo</a><button class="mbtn" id="mclose">Fechar</button></div>
-  <nav>
-    <a href="#home">Início</a>
-    <a href="#empreendimentos">Empreendimentos</a>
-    <a href="#sobre">Nossa história</a>
-    <a href="#contato">Agende uma visita</a>
-  </nav>
-  <div class="foot"><span>Patos de Minas (34) 3821-2727</span><span>Barretos (17) 99645-6899</span><a class="ln" href="https://wa.me/553438212727">WhatsApp</a></div>
-</div>
+<nav class="mnav" id="mnav">
+  <a href="#home">Home</a><a href="#sobre">Sobre nós</a><a href="#empreendimentos">Empreendimentos</a><a href="#contato">Fale conosco</a>
+  <span class="tel2">Patos de Minas (34) 3821-2727<br>Barretos (17) 99645-6899</span>
+</nav>
 <main id="app"></main>
 <footer>
-  <div class="g">
-    <div class="wm">Queiroz de Melo</div>
-    <div class="f"><p>Rua Tiradentes, 611, Centro</p><p>Patos de Minas/MG</p></div>
-    <div class="f"><p>Patos de Minas (34) 3821-2727</p><p>Barretos (17) 99645-6899</p></div>
-    <div class="f"><p><a href="#estancia-queiroz-de-melo">Estância Queiroz de Melo</a></p><p><a href="#estancia-das-aguas">Estância das Águas</a></p><p><a href="#estancia-casa-real">Estância Casa Real</a></p></div>
-    <div class="f"><p><a class="ln" href="https://wa.me/553438212727">Falar no WhatsApp</a></p><p>Desde 1999</p></div>
-    <p class="note">Protótipo de apresentação feito com fotos e informações públicas do site atual da Queiroz de Melo.</p>
+  <div class="w">
+    <div class="grid">
+      <div><img src="img/logo-queiroz-de-melo-branco.png" alt="Queiroz de Melo"><p>Empreendimentos desde 1999.</p></div>
+      <div><h4>Sede</h4><p>Rua Tiradentes, 611, Centro</p><p>Patos de Minas, MG</p></div>
+      <div><h4>Contato</h4><p>Patos de Minas (34) 3821-2727</p><p>Barretos (17) 99645-6899</p><p><a class="uline" href="https://wa.me/553438212727">WhatsApp</a></p></div>
+      <div><h4>Empreendimentos</h4><p><a href="#estancia-queiroz-de-melo">Estância Queiroz de Melo</a></p><p><a href="#estancia-das-aguas">Estância das Águas</a></p><p><a href="#estancia-casa-real">Estância Casa Real</a></p></div>
+    </div>
+    <p class="note">Demonstrativo de proposta. Fotos, marca e informações de propriedade da Queiroz de Melo Empreendimentos.</p>
   </div>
 </footer>
-<img class="peek ph" id="peek" alt="">
 
 <script>
 {
 const TBD='<span class="tbd">a definir com a Queiroz de Melo</span>';
-const B='https://queirozdemelo.com.br/wp-content/uploads/2021/08/';
-const src=f=>/^(qm|ag|cr)-/.test(f)?'img/'+f:B+f;
-const im=(f,alt,cls)=>`<div class="ph ${cls||''}"><img src="${src(f)}" alt="${alt}" loading="lazy" onerror="this.remove()"></div>`;
+const im=(f,alt,cls)=>`<div class="ph ${cls||''}"><img src="img/${f}" alt="${alt}" loading="lazy"></div>`;
 const EMP=[
- {id:'estancia-queiroz-de-melo',nome:'Estância Queiroz de Melo',curto:'Queiroz de Melo',cidade:'Patos de Minas, MG',end:'Rua Major Gote, 2.265, Bairro Queiroz de Melo',metr:'407 m²',status:'',
+ {id:'estancia-queiroz-de-melo',pre:'Estância',nome:'Queiroz de Melo',cidade:'Patos de Minas, MG',end:'Rua Major Gote, 2.265, Bairro Queiroz de Melo',metr:'407 m²',status:'',logo:'',
   frase:'Localização, segurança e lazer no mesmo lugar.',
   texto:'Um endereço próximo a colégios, universidades e comércio, com portaria de 183 m², mais de 11 mil m² de área verde e muro em todo o perímetro.',
   lazer:['Portaria de 183 m² com sala de visitas, lavabos e escritório','11.388,62 m² de área verde','Área para caminhada','Quadra de tênis','Quadra poliesportiva','Área de lazer','Parque infantil','Muro em todo o perímetro','Perto de colégios, universidades e comércio'],
   fotos:['qm-avenida-palmeiras.jpg','qm-portaria.jpg','qm-coreto-vista.jpg','qm-capela.jpg','qm-alameda.jpg']},
- {id:'estancia-das-aguas',nome:'Estância das Águas',curto:'das Águas',cidade:'Patos de Minas, MG',end:'Av. Thiago Caetano de Menezes, 270, Bairro das Palmeiras',metr:'450 m²',status:'Obras concluídas e entregues',
+ {id:'estancia-das-aguas',pre:'Estância',nome:'das Águas',cidade:'Patos de Minas, MG',end:'Av. Thiago Caetano de Menezes, 270, Bairro das Palmeiras',metr:'450 m²',status:'Obras concluídas e entregues',logo:'',
   frase:'Qualidade de vida com infraestrutura completa.',
   texto:'Localização nobre, ao lado das Chácaras Caiçaras. Obras concluídas e entregues, pronto para receber a sua casa.',
   lazer:['Obras concluídas e entregues','Portaria','Academia','Quadra de tênis','Quadra poliesportiva','Ampla área verde','Ao lado das Chácaras Caiçaras'],
   fotos:['ag-fachada.jpg','ag-quadra-tenis.jpg','ag-entrada.jpg','ag-salao.jpg','ag-quadra.jpg']},
- {id:'estancia-casa-real',nome:'Estância Casa Real',curto:'Casa Real',cidade:'Barretos, SP',end:'Av. das Nações, 600, City Barretos',metr:'407 m²',status:'Liberado para construir, escritura imediata',
+ {id:'estancia-casa-real',pre:'Estância',nome:'Casa Real',cidade:'Barretos, SP',end:'Av. das Nações, 600, City Barretos',metr:'407 m²',status:'Liberado para construir, escritura imediata',logo:'',
   frase:'Qualidade de vida e modernidade em um único lugar.',
   texto:'Ao lado do City Barretos, perto do shopping e do centro universitário. Infraestrutura concluída, 16.000 m² de área verde e escritura imediata.',
   lazer:['Infraestrutura concluída','Liberado para construir','Escritura imediata','16.000 m² de área verde','Academia','Ao lado do City Barretos','Perto do shopping e do centro universitário'],
   fotos:['cr-aerea.jpg','cr-portaria.jpg','cr-ipe.jpg','cr-avenida.jpg','cr-aerea-2.jpg']}
 ];
+const full=e=>e.pre+' '+e.nome;
+const lock=e=>e.logo?`<span class="lock"><img src="img/${e.logo}" alt="${full(e)}"></span>`:`<span class="lock"><span class="cap">${e.pre}</span><span class="disp">${e.nome}</span></span>`;
 const wa=n=>'https://wa.me/553438212727?text='+encodeURIComponent('Olá! Gostaria de agendar uma visita'+(n?' ao '+n:'')+'.');
-const form=sel=>`<form id="f" novalidate>
- <label for="fn">Nome<input id="fn" autocomplete="name"></label>
- <label for="ft">Telefone<input id="ft" type="tel" autocomplete="tel"></label>
- <label for="fs">Empreendimento<select id="fs"><option value="">Todos</option>${EMP.map(e=>`<option ${e.id===sel?'selected':''}>${e.nome}</option>`).join('')}</select></label>
- <label class="chk" for="fp"><input id="fp" type="checkbox"> Aceito o aviso de privacidade.</label>
- <button class="send" type="submit">Solicitar contato</button><p class="ok" id="fok" aria-live="polite"></p></form>`;
-const cta=sel=>`<section class="sec cta g"><h2>Agende uma visita.</h2>
- <div class="c1"><p class="lbl">Patos de Minas</p><p>(34) 3821-2727</p></div>
- <div class="c2"><p class="lbl">Barretos</p><p>(17) 99645-6899</p></div>
- <div class="c3"><p class="lbl">WhatsApp</p><p><a class="ln" href="${wa(sel)}">Iniciar conversa</a></p></div>
- <div class="c4"><p class="lbl">Sede</p><p>Rua Tiradentes, 611<br>Patos de Minas, MG</p></div></section>`;
-const rows=()=>EMP.map(e=>`<a class="row" href="#${e.id}" data-img="${src(e.fotos[0])}">${im(e.fotos[0],e.nome,'thumb')}<span class="nm">${e.nome}</span><span>${e.cidade}</span><span class="lbl" style="font-size:15px">${e.status||'Status a definir'}</span><span class="go">Ver empreendimento</span></a>`).join('');
+const form=sel=>`<form novalidate>
+ <label for="fn${sel}">Nome<input id="fn${sel}" autocomplete="name"></label>
+ <label for="ft${sel}">Telefone<input id="ft${sel}" type="tel" autocomplete="tel"></label>
+ <label for="fs${sel}">Empreendimento<select id="fs${sel}"><option value="">Todos</option>${EMP.map(e=>`<option ${e.id===sel?'selected':''}>${full(e)}</option>`).join('')}</select></label>
+ <label class="chk"><input type="checkbox"> Aceito o aviso de privacidade.</label>
+ <button class="btn send" type="submit">Solicitar contato</button><p class="ok" aria-live="polite"></p></form>`;
+const lams=()=>EMP.map((e,i)=>`<section class="lam" style="z-index:${i+1}">${im(e.fotos[0],full(e))}<div class="w in"><div><span class="cap" style="color:#dfe6e0;display:block;margin-bottom:18px">${e.cidade}</span>${lock(e)}<div class="acts"><a class="btn gold" href="#${e.id}">Conhecer</a><a class="btn line" href="${wa(full(e))}">Agendar visita</a></div></div>
+ <dl><div><dt>Status</dt><dd>${e.status||TBD}</dd></div><div><dt>Metragem</dt><dd>${e.metr}</dd></div><div><dt>Endereço</dt><dd>${e.end}</dd></div></dl></div></section>`).join('');
+const cta=n=>`<section class="cta"><div class="w grid"><div><span class="cap">Atendimento</span><span class="rule"></span><h2>Agende uma visita.</h2></div>
+ <ul><li><span>Patos de Minas</span><span>(34) 3821-2727</span></li><li><span>Barretos</span><span>(17) 99645-6899</span></li><li><span>WhatsApp</span><a class="uline" href="${wa(n)}">Iniciar conversa</a></li><li><span>Sede</span><span>Rua Tiradentes, 611</span></li></ul></div></section>`;
+const dif=`<section class="dif"><div class="w"><span class="cap" style="color:var(--gold)">Padrão Queiroz de Melo</span><span class="rule"></span><h2>O que cada endereço entrega.</h2>
+ <div class="cols"><div><h3>Infraestrutura pronta</h3><p>Estância das Águas com obras concluídas. Estância Casa Real com infraestrutura concluída.</p></div>
+ <div><h3>Escritura imediata</h3><p>Na Estância Casa Real, lote liberado para construir.</p></div>
+ <div><h3>Área verde</h3><p>Mais de 11 mil m² na Estância Queiroz de Melo e 16 mil m² na Estância Casa Real.</p></div>
+ <div><h3>Segurança</h3><p>Portaria e muro em todo o perímetro.</p></div></div></div></section>`;
 const V={
-home:()=>{const a=EMP[1],b=EMP[0],c=EMP[2];return `
-<section class="cover">${im(b.fotos[0],b.nome)}<div class="txt g"><h1>Lugares feitos<br>para viver bem.</h1><p>Empreendimentos em Patos de Minas e Barretos, desde 1999.</p><span class="scroll">Role para descobrir</span></div></section>
-<section class="sec state g"><p class="lbl">A empresa</p><p class="big">Há mais de 25 anos a Queiroz de Melo cria empreendimentos pensados para durar. Projetos arrojados, cuidado com o meio ambiente e compromisso com prazo.</p>
- <p class="sub">A credibilidade construída nesse tempo é o nosso maior patrimônio. É o que chamamos de Padrão Queiroz de Melo de Qualidade.</p>
- <p class="sub2">Fundada em 6 de julho de 1999, em Patos de Minas.<br><a class="more" href="#sobre">Conheça nossa história</a></p></section>
-<section class="idx g" id="lista"><div class="head"><h2>Empreendimentos</h2><span class="lbl">Patos de Minas e Barretos</span></div>${rows()}</section>
-<section class="sec feat g">${im(b.fotos[1],b.nome,'big')}<div class="side">${im(b.fotos[2],b.nome)}<div><p class="lbl">${b.cidade}</p><h3>${b.nome}</h3><p style="color:var(--mute)">${b.texto}</p><a class="ln" href="#${b.id}">Ver empreendimento</a></div></div></section>
-<section class="sec trust g"><h2>O que você encontra em cada endereço.</h2><ul>
- <li><b>Infraestrutura pronta</b><span>Estância das Águas com obras concluídas e entregues. Estância Casa Real com infraestrutura concluída.</span></li>
- <li><b>Escritura imediata</b><span>Na Estância Casa Real, lote liberado para construir.</span></li>
- <li><b>Área verde</b><span>Mais de 11 mil m² na Estância Queiroz de Melo e 16 mil m² na Estância Casa Real.</span></li>
- <li><b>Segurança</b><span>Portaria e muro em todo o perímetro.</span></li></ul></section>
-${cta('')}`},
-empreendimentos:()=>`<section class="sec g" style="padding-top:140px"><div style="grid-column:1/-1"><h1 style="font-size:clamp(46px,7vw,112px)">Empreendimentos</h1><p class="lbl" style="margin-top:18px;font-size:17px">Três endereços, um mesmo padrão de qualidade.</p></div></section>
-<section class="idx g" style="padding-bottom:120px">${rows()}</section>${cta('')}`,
-sobre:()=>`<section class="cover" style="height:78svh">${im(EMP[0].fotos[4],'Estância Queiroz de Melo')}<div class="txt g"><h1>Desde 1999.</h1></div></section>
-<section class="sec state g"><p class="lbl">Nossa história</p><p class="big">Fundada em 6 de julho de 1999, a Queiroz de Melo Empreendimentos se dedica a grandes empreendimentos imobiliários nas cidades onde atua.</p>
- <p class="sub">Somos conhecidos por projetos de excelência, pela preocupação com o impacto ambiental e pela pontualidade nas entregas.</p>
- <p class="sub2">Nosso compromisso é com a satisfação dos clientes, o retorno aos investidores e o desenvolvimento das cidades onde atuamos.</p></section>
-<section class="sec trust g"><h2>Valores</h2><ul>${[['Pessoas e meio ambiente','Respeito em cada decisão'],['Responsabilidade','Atuação responsável'],['Transparência','Relação clara com clientes e investidores'],['Resultado','Foco no que foi prometido'],['Qualidade e inovação','O reconhecimento que buscamos em tudo o que fazemos']].map(x=>`<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join('')}</ul></section>${cta('')}`,
-contato:()=>`<section class="sec g" style="padding-top:150px"><div style="grid-column:1/span 6"><h1 style="font-size:clamp(46px,6vw,96px)">Fale com a Queiroz de Melo.</h1><p style="margin-top:24px;color:var(--mute)">Deixe seu contato e nossa equipe retorna para agendar uma visita.</p></div><div style="grid-column:8/span 5">${form('')}</div></section>${cta('')}`
+home:()=>`<section class="cover">${im(EMP[0].fotos[0],'Estância Queiroz de Melo')}<div class="w in"><span class="cap">Patos de Minas e Barretos</span><span class="rule"></span><h1>Lugares feitos para viver bem.</h1><p style="margin-top:22px">Empreendimentos com segurança, área verde e lazer completo, desde 1999.</p></div></section>
+<section class="inst"><div class="w grid"><div class="txt"><span class="cap">A empresa</span><span class="rule"></span><h2>Padrão Queiroz de Melo de Qualidade.</h2><p style="margin-top:24px">Há mais de 25 anos criamos empreendimentos pensados para durar. Projetos arrojados, cuidado com o meio ambiente e compromisso com prazo.</p><p>A credibilidade construída nesse tempo é o nosso maior patrimônio.</p>
+ <div class="facts"><div><b>1999</b><span>fundação</span></div><div><b>Patos de Minas</b><span>e Barretos</span></div></div></div>${im(EMP[0].fotos[1],'Portaria da Estância Queiroz de Melo')}</div></section><div class="after-inst"></div>
+<div class="w stack-head"><h2>Nossos empreendimentos</h2><p>Três endereços, um mesmo padrão. Role para conhecer cada um.</p></div>
+${lams()}${dif}${cta('')}`,
+empreendimentos:()=>`<div class="w page-top"><span class="cap" style="color:var(--gold)">Portfólio</span><span class="rule"></span><h1>Empreendimentos</h1></div>${lams()}${cta('')}`,
+sobre:()=>`<section class="cover" style="height:72svh">${im(EMP[0].fotos[4],'Estância Queiroz de Melo')}<div class="w in"><span class="cap">Nossa história</span><span class="rule"></span><h1>Desde 1999.</h1></div></section>
+<section class="w ficha"><div><span class="cap" style="color:var(--gold)">Quem somos</span><span class="rule"></span><h2>Grandes empreendimentos nas cidades onde atuamos.</h2></div><div><p class="lead">Fundada em 6 de julho de 1999, a Queiroz de Melo Empreendimentos é conhecida por projetos de excelência.</p><p style="color:var(--mute)">Preocupação com o impacto ambiental e pontualidade nas entregas fazem parte de cada projeto. Nosso compromisso é com a satisfação dos clientes, o retorno aos investidores e o desenvolvimento das cidades.</p>
+ <dl><div><dt>Visão</dt><dd>Ser reconhecida pela qualidade que imprimimos em tudo o que fazemos.</dd></div><div><dt>Valores</dt><dd>Respeito às pessoas e ao meio ambiente, atuação responsável, transparência, foco no resultado, qualidade e inovação.</dd></div></dl></div></section>${cta('')}`,
+contato:()=>`<section class="w loc" style="padding-top:clamp(70px,8vw,120px)"><div><span class="cap" style="color:var(--gold)">Fale conosco</span><span class="rule"></span><h1 style="font-size:clamp(42px,5vw,76px);color:var(--g)">Vamos agendar sua visita.</h1><p style="margin-top:24px;color:var(--mute);max-width:40ch">Deixe seu contato e nossa equipe retorna. Se preferir, fale direto pelo WhatsApp ou por telefone.</p></div>${form('')}</section>${cta('')}`
 };
-const emp=e=>`<section class="cover">${im(e.fotos[0],e.nome)}<div class="txt g"><h1>${e.nome}</h1><p>${e.cidade}</p></div></section>
-<section class="sec g"><div class="spec"><h2 class="serif" style="font-size:clamp(30px,3vw,44px);margin-bottom:28px">Ficha técnica</h2><dl>
+const emp=e=>`<section class="ehero">${im(e.fotos[0],full(e))}<div class="w in"><span class="cap" style="color:#dfe6e0;display:block;margin-bottom:18px">${e.cidade}</span>${lock(e)}</div></section>
+<section class="w ficha"><div><span class="cap" style="color:var(--gold)">Ficha técnica</span><span class="rule"></span><h2>${full(e)}</h2><dl>
  <div><dt>Cidade</dt><dd>${e.cidade}</dd></div><div><dt>Endereço</dt><dd>${e.end}</dd></div><div><dt>Status</dt><dd>${e.status||TBD}</dd></div><div><dt>Metragem</dt><dd>${e.metr}</dd></div><div><dt>Lotes</dt><dd>${TBD}</dd></div><div><dt>Implantação</dt><dd>${TBD}</dd></div></dl></div>
- <div class="intro"><p class="serif">${e.frase}</p><p style="color:var(--mute)">${e.texto}</p><a class="ln" href="${wa(e.nome)}">Agendar visita pelo WhatsApp</a></div></section>
-<section class="g mos">${im(e.fotos[1],e.nome,'a')}${im(e.fotos[2],e.nome,'b')}${im(e.fotos[3],e.nome,'c')}${im(e.fotos[4],e.nome,'d')}</section>
-<section class="sec laz g"><h2>Lazer e diferenciais</h2><ul>${e.lazer.map(x=>`<li>${x}</li>`).join('')}</ul></section>
-<section class="sec trust g"><div class="loc"><p class="lbl">Localização</p><p class="serif" style="font-size:clamp(26px,2.6vw,38px);line-height:1.2;margin-top:12px">${e.end}<br>${e.cidade}</p><a class="ln" style="margin-top:20px" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.end+', '+e.cidade)}">Abrir no mapa</a></div><div class="loc2">${form(e.id)}</div></section>
-${cta(e.nome)}`;
-const app=document.getElementById('app'),menu=document.getElementById('menu'),peek=document.getElementById('peek');
-function show(){const h=location.hash.slice(1)||'home';const e=EMP.find(x=>x.id===h);app.innerHTML=e?emp(e):(V[h]||V.home)();menu.classList.remove('on');document.title=(e?e.nome:'Queiroz de Melo')+' | Queiroz de Melo';window.scrollTo(0,0)}
-document.getElementById('mopen').onclick=()=>{menu.classList.add('on');document.getElementById('mclose').focus()};
-document.getElementById('mclose').onclick=()=>menu.classList.remove('on');
-document.addEventListener('keydown',ev=>{if(ev.key==='Escape')menu.classList.remove('on')});
-app.addEventListener('mousemove',ev=>{const r=ev.target.closest('.row');if(!r||innerWidth<900){peek.classList.remove('on');return}if(peek.getAttribute('src')!==r.dataset.img)peek.src=r.dataset.img;peek.style.left=(ev.clientX+24)+'px';peek.style.top=(ev.clientY-200)+'px';peek.classList.add('on')});
-app.addEventListener('mouseleave',()=>peek.classList.remove('on'));
-app.addEventListener('submit',ev=>{ev.preventDefault();document.getElementById('fok').textContent='No site final, este pedido chega direto para a equipe da Queiroz de Melo.'});
-window.addEventListener('hashchange',show);show();
+ <div style="align-self:end"><p class="lead">${e.frase}</p><p style="color:var(--mute)">${e.texto}</p><a class="btn" style="color:var(--g);margin-top:12px" href="${wa(full(e))}">Agendar visita</a></div></section>
+<section class="w mos">${im(e.fotos[1],full(e),'a')}${im(e.fotos[2],full(e),'b')}${im(e.fotos[3],full(e),'c')}${im(e.fotos[4],full(e),'d')}</section>
+<section class="laz"><div class="w grid"><div><span class="cap">Lazer e diferenciais</span><span class="rule"></span><h2>Tudo dentro do seu endereço.</h2></div><ul>${e.lazer.map(x=>`<li>${x}</li>`).join('')}</ul></div></section>
+<section class="w loc"><div><span class="cap" style="color:var(--gold)">Localização</span><span class="rule"></span><h2>${e.end}</h2><p style="margin-top:14px;color:var(--mute)">${e.cidade}</p><a class="uline" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.end+', '+e.cidade)}">Abrir no mapa</a></div>${form(e.id)}</section>${cta(full(e))}`;
+const app=document.getElementById('app'),hd=document.getElementById('hd'),mn=document.getElementById('mnav'),bg=document.getElementById('bg');
+function show(){const h=location.hash.slice(1)||'home';const e=EMP.find(x=>x.id===h);app.innerHTML=e?emp(e):(V[h]||V.home)();
+ const k=e?'empreendimentos':(V[h]?h:'home');document.querySelectorAll('nav.main a').forEach(a=>a.classList.toggle('on',a.dataset.k===k));
+ mn.classList.remove('on');bg.setAttribute('aria-expanded','false');document.title=(e?full(e)+' | ':'')+'Queiroz de Melo';window.scrollTo(0,0)}
+bg.onclick=()=>{const o=mn.classList.toggle('on');bg.setAttribute('aria-expanded',o)};
+addEventListener('scroll',()=>hd.classList.toggle('sc',scrollY>10),{passive:true});
+app.addEventListener('submit',ev=>{ev.preventDefault();ev.target.querySelector('.ok').textContent='No site final, este pedido chega direto para a equipe da Queiroz de Melo.'});
+addEventListener('hashchange',show);show();
 }
 </script>
 </body>
