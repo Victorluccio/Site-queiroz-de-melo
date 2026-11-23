@@ -21,7 +21,7 @@ O novo site será levado ao cliente como demonstrativo visual na prospecção.
 | 04 | Escopo: páginas, funções e o que fica fora | Aprovada em 23/11/2026 |
 | 05 | Conteúdo: mapa do site, textos, fotos e dados de cada empreendimento | Aprovada em 23/11/2026 |
 | 06 | Arquitetura: tecnologia, hospedagem, domínio, painel de edição, formulários, SEO | Aprovada em 23/11/2026 |
-| 07 | Protótipo navegável | Em andamento |
+| 07 | Protótipo navegável | Aguardando aprovação |
 | 08 | Plano de entregas | Pendente |
 | 09 | Construção e publicação | Pendente |
 
@@ -47,6 +47,7 @@ D14 (23/11/2026): etapa 05 aprovada.
 D15 (23/11/2026): repositório passa a ser privado.
 D16 (23/11/2026): revisão interna do demonstrativo por link privado do Claude. O link para o cliente será definido antes da apresentação.
 D17 (23/11/2026): etapa 06 aprovada.
+D18 (23/11/2026): protótipo com ilustrações no lugar das fotos, porque o ambiente de revisão não carrega imagens externas.
 
 ## Pontos em aberto
 
@@ -65,4 +66,4 @@ Para confirmar com o cliente (não travam o demonstrativo):
 
 ## Próximo passo
 
-Montar o protótipo navegável (etapa 07).
+Revisar e aprovar o protótipo (etapa 07).
