@@ -15,8 +15,8 @@ O novo site será levado ao cliente como demonstrativo visual na prospecção.
 | Etapa | Documento | Status |
 |---|---|---|
 | 00 | Documento mestre | Aprovada em 23/11/2026 |
-| 01 | Referência: análise do site atual da Queiroz de Melo | Aguardando aprovação |
-| 02 | Referência: sites de incorporadoras de alto padrão | Pendente |
+| 01 | Referência: análise do site atual da Queiroz de Melo | Aprovada em 23/11/2026 |
+| 02 | Referência: sites de incorporadoras de alto padrão | Aguardando aprovação |
 | 03 | Processo de entrega | Pendente |
 | 04 | Escopo: páginas, funções e o que fica fora | Pendente |
 | 05 | Conteúdo: mapa do site, textos, fotos e dados de cada empreendimento | Pendente |
@@ -35,6 +35,8 @@ D02 (23/11/2026): repositório criado em github.com/Victorluccio/Site-queiroz-de
 D03 (23/11/2026): do app-agro vem só o método de trabalho. O processo de entrega (03) será escrito do zero para este projeto, no mesmo padrão de uma empresa de desenvolvimento.
 D04 (23/11/2026): site atual da empresa em queirozdemelo.com.br. Página de referência informada: queirozdemelo.com.br/empreedimentos/estancia-das-aguas/
 D05 (23/11/2026): etapa 00 aprovada.
+D06 (23/11/2026): etapa 01 aprovada.
+D07 (23/11/2026): referências da etapa 02 são Alphaville Urbanismo, JHSF e Granja Marileusa.
 
 ## Pontos em aberto
 
@@ -46,4 +48,4 @@ Para confirmar com o cliente (levantados na etapa 01):
 
 ## Próximo passo
 
-Aprovar a etapa 01 e abrir a etapa 02 (sites de incorporadoras de alto padrão).
+Aprovar a etapa 02 e abrir a etapa 03 (processo de entrega).
