@@ -165,13 +165,14 @@ a:focus-visible,button:focus-visible{outline:1px solid currentColor;outline-offs
 {
 const TBD='<span class="tbd">a definir com a Queiroz de Melo</span>';
 const B='https://queirozdemelo.com.br/wp-content/uploads/2021/08/';
-const im=(f,alt,cls)=>`<div class="ph ${cls||''}"><img src="${B}${f}" alt="${alt}" loading="lazy" onerror="this.remove()"></div>`;
+const src=f=>/^(qm|ag|cr)-/.test(f)?'img/'+f:B+f;
+const im=(f,alt,cls)=>`<div class="ph ${cls||''}"><img src="${src(f)}" alt="${alt}" loading="lazy" onerror="this.remove()"></div>`;
 const EMP=[
  {id:'estancia-queiroz-de-melo',nome:'Estância Queiroz de Melo',curto:'Queiroz de Melo',cidade:'Patos de Minas, MG',end:'Rua Major Gote, 2.265, Bairro Queiroz de Melo',metr:'407 m²',status:'',
   frase:'Localização, segurança e lazer no mesmo lugar.',
   texto:'Um endereço próximo a colégios, universidades e comércio, com portaria de 183 m², mais de 11 mil m² de área verde e muro em todo o perímetro.',
   lazer:['Portaria de 183 m² com sala de visitas, lavabos e escritório','11.388,62 m² de área verde','Área para caminhada','Quadra de tênis','Quadra poliesportiva','Área de lazer','Parque infantil','Muro em todo o perímetro','Perto de colégios, universidades e comércio'],
-  fotos:['Estancia-Queiroz-de-Melo-DSC_4735.jpg','Estancia-Queiroz-de-Melo-DSC_4755.jpg','Estancia-Queiroz-de-Melo-DSC_4810.jpg','DSC_4606-scaled.jpg','Estancia-Queiroz-de-Melo-DSC_4796.jpg']},
+  fotos:['qm-avenida-palmeiras.jpg','qm-portaria.jpg','qm-coreto-vista.jpg','qm-capela.jpg','qm-alameda.jpg']},
  {id:'estancia-das-aguas',nome:'Estância das Águas',curto:'das Águas',cidade:'Patos de Minas, MG',end:'Av. Thiago Caetano de Menezes, 270, Bairro das Palmeiras',metr:'450 m²',status:'Obras concluídas e entregues',
   frase:'Qualidade de vida com infraestrutura completa.',
   texto:'Localização nobre, ao lado das Chácaras Caiçaras. Obras concluídas e entregues, pronto para receber a sua casa.',
@@ -195,10 +196,10 @@ const cta=sel=>`<section class="sec cta g"><h2>Agende uma visita.</h2>
  <div class="c2"><p class="lbl">Barretos</p><p>(17) 99645-6899</p></div>
  <div class="c3"><p class="lbl">WhatsApp</p><p><a class="ln" href="${wa(sel)}">Iniciar conversa</a></p></div>
  <div class="c4"><p class="lbl">Sede</p><p>Rua Tiradentes, 611<br>Patos de Minas, MG</p></div></section>`;
-const rows=()=>EMP.map(e=>`<a class="row" href="#${e.id}" data-img="${B}${e.fotos[0]}">${im(e.fotos[0],e.nome,'thumb')}<span class="nm">${e.nome}</span><span>${e.cidade}</span><span class="lbl" style="font-size:15px">${e.status||'Status a definir'}</span><span class="go">Ver empreendimento</span></a>`).join('');
+const rows=()=>EMP.map(e=>`<a class="row" href="#${e.id}" data-img="${src(e.fotos[0])}">${im(e.fotos[0],e.nome,'thumb')}<span class="nm">${e.nome}</span><span>${e.cidade}</span><span class="lbl" style="font-size:15px">${e.status||'Status a definir'}</span><span class="go">Ver empreendimento</span></a>`).join('');
 const V={
 home:()=>{const a=EMP[1],b=EMP[0],c=EMP[2];return `
-<section class="cover">${im(a.fotos[0],'Estância das Águas')}<div class="txt g"><h1>Lugares feitos<br>para viver bem.</h1><p>Empreendimentos em Patos de Minas e Barretos, desde 1999.</p><span class="scroll">Role para descobrir</span></div></section>
+<section class="cover">${im(b.fotos[0],b.nome)}<div class="txt g"><h1>Lugares feitos<br>para viver bem.</h1><p>Empreendimentos em Patos de Minas e Barretos, desde 1999.</p><span class="scroll">Role para descobrir</span></div></section>
 <section class="sec state g"><p class="lbl">A empresa</p><p class="big">Há mais de 25 anos a Queiroz de Melo cria empreendimentos pensados para durar. Projetos arrojados, cuidado com o meio ambiente e compromisso com prazo.</p>
  <p class="sub">A credibilidade construída nesse tempo é o nosso maior patrimônio. É o que chamamos de Padrão Queiroz de Melo de Qualidade.</p>
  <p class="sub2">Fundada em 6 de julho de 1999, em Patos de Minas.<br><a class="more" href="#sobre">Conheça nossa história</a></p></section>
@@ -212,7 +213,7 @@ home:()=>{const a=EMP[1],b=EMP[0],c=EMP[2];return `
 ${cta('')}`},
 empreendimentos:()=>`<section class="sec g" style="padding-top:140px"><div style="grid-column:1/-1"><h1 style="font-size:clamp(46px,7vw,112px)">Empreendimentos</h1><p class="lbl" style="margin-top:18px;font-size:17px">Três endereços, um mesmo padrão de qualidade.</p></div></section>
 <section class="idx g" style="padding-bottom:120px">${rows()}</section>${cta('')}`,
-sobre:()=>`<section class="cover" style="height:78svh">${im(EMP[0].fotos[3],'Estância Queiroz de Melo')}<div class="txt g"><h1>Desde 1999.</h1></div></section>
+sobre:()=>`<section class="cover" style="height:78svh">${im(EMP[0].fotos[4],'Estância Queiroz de Melo')}<div class="txt g"><h1>Desde 1999.</h1></div></section>
 <section class="sec state g"><p class="lbl">Nossa história</p><p class="big">Fundada em 6 de julho de 1999, a Queiroz de Melo Empreendimentos se dedica a grandes empreendimentos imobiliários nas cidades onde atua.</p>
  <p class="sub">Somos conhecidos por projetos de excelência, pela preocupação com o impacto ambiental e pela pontualidade nas entregas.</p>
  <p class="sub2">Nosso compromisso é com a satisfação dos clientes, o retorno aos investidores e o desenvolvimento das cidades onde atuamos.</p></section>
