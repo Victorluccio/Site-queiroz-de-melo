@@ -182,7 +182,7 @@ const EMP=[
   frase:'Qualidade de vida e modernidade em um único lugar.',
   texto:'Ao lado do City Barretos, perto do shopping e do centro universitário. Infraestrutura concluída, 16.000 m² de área verde e escritura imediata.',
   lazer:['Infraestrutura concluída','Liberado para construir','Escritura imediata','16.000 m² de área verde','Academia','Ao lado do City Barretos','Perto do shopping e do centro universitário'],
-  fotos:['gallery1.jpg','gallery2.jpg','gallery3.jpg','gallery5.jpg','gallery10.jpg']}
+  fotos:['cr-aerea.jpg','cr-portaria.jpg','cr-ipe.jpg','cr-avenida.jpg','cr-aerea-2.jpg']}
 ];
 const wa=n=>'https://wa.me/553438212727?text='+encodeURIComponent('Olá! Gostaria de agendar uma visita'+(n?' ao '+n:'')+'.');
 const form=sel=>`<form id="f" novalidate>
@@ -226,7 +226,7 @@ const emp=e=>`<section class="cover">${im(e.fotos[0],e.nome)}<div class="txt g">
  <div class="intro"><p class="serif">${e.frase}</p><p style="color:var(--mute)">${e.texto}</p><a class="ln" href="${wa(e.nome)}">Agendar visita pelo WhatsApp</a></div></section>
 <section class="g mos">${im(e.fotos[1],e.nome,'a')}${im(e.fotos[2],e.nome,'b')}${im(e.fotos[3],e.nome,'c')}${im(e.fotos[4],e.nome,'d')}</section>
 <section class="sec laz g"><h2>Lazer e diferenciais</h2><ul>${e.lazer.map(x=>`<li>${x}</li>`).join('')}</ul></section>
-<section class="sec trust g"><div class="loc"><p class="lbl">Localização</p><p class="serif" style="font-size:clamp(26px,2.6vw,38px);line-height:1.2;margin-top:12px">${e.end}<br>${e.cidade}</p><a class="ln" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.end+', '+e.cidade)}">Abrir no mapa</a></div><div class="loc2">${form(e.id)}</div></section>
+<section class="sec trust g"><div class="loc"><p class="lbl">Localização</p><p class="serif" style="font-size:clamp(26px,2.6vw,38px);line-height:1.2;margin-top:12px">${e.end}<br>${e.cidade}</p><a class="ln" style="margin-top:20px" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.end+', '+e.cidade)}">Abrir no mapa</a></div><div class="loc2">${form(e.id)}</div></section>
 ${cta(e.nome)}`;
 const app=document.getElementById('app'),menu=document.getElementById('menu'),peek=document.getElementById('peek');
 function show(){const h=location.hash.slice(1)||'home';const e=EMP.find(x=>x.id===h);app.innerHTML=e?emp(e):(V[h]||V.home)();menu.classList.remove('on');document.title=(e?e.nome:'Queiroz de Melo')+' | Queiroz de Melo';window.scrollTo(0,0)}

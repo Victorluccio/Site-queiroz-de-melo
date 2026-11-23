@@ -44,3 +44,14 @@ Mudanças, com base no complemento da etapa 02:
 8. Página de empreendimento com ficha técnica em linhas finas e mosaico de fotos.
 
 As fotos são carregadas direto do site atual da Queiroz de Melo. Para ver, o arquivo prototipo/index.html é aberto no navegador do computador. O link privado do Claude não serve para esta versão, porque bloqueia imagens de outros sites.
+
+## Fotos (23/11/2026)
+
+O Victor enviou prints das fotos do site atual: 7 da Estância Queiroz de Melo, 6 da Estância das Águas e 7 da Estância Casa Real.
+Elas ficam em prototipo/img com prefixo qm-, ag- e cr-.
+O protótipo publicado no link privado já usa essas fotos.
+
+Pontos vistos nas fotos e que não estão no texto do site atual (confirmar com o cliente):
+1. Estância Queiroz de Melo: capela e coreto.
+2. Estância das Águas: salão de festas e fonte.
+3. Estância Casa Real: fotos aéreas mostram a divisão das quadras, que podem servir de base para a implantação.

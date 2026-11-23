@@ -50,6 +50,7 @@ D17 (23/11/2026): etapa 06 aprovada.
 D18 (23/11/2026): protótipo com ilustrações no lugar das fotos, porque o ambiente de revisão não carrega imagens externas.
 D19 (23/11/2026): versão 1 do protótipo reprovada por ter cara de IA. Versão 2 refeita com padrões de sites de alto padrão do Brasil e só com fotos reais.
 D20 (23/11/2026): a versão 2 carrega as fotos direto do site atual e é revisada abrindo o arquivo no navegador.
+D21 (23/11/2026): fotos enviadas pelo Victor por print e incluídas no protótipo, que volta a ser revisado pelo link privado.
 
 ## Pontos em aberto
 
@@ -65,7 +66,8 @@ Para confirmar com o cliente (não travam o demonstrativo):
 5. Se a metragem informada é o tamanho do lote.
 6. Status da Estância Queiroz de Melo.
 7. Quantidade de lotes e implantação de cada empreendimento.
+8. Itens vistos nas fotos e fora do texto: capela e coreto (Queiroz de Melo), salão de festas e fonte (das Águas).
 
 ## Próximo passo
 
-Victor abrir a versão 2 do protótipo no navegador e revisar.
+Victor revisar a versão 2 do protótipo no link privado e aprovar a etapa 07.
