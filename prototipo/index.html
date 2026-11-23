@@ -164,7 +164,8 @@ a:focus-visible,button:focus-visible{outline:1px solid currentColor;outline-offs
 <script>
 {
 const TBD='<span class="tbd">a definir com a Queiroz de Melo</span>';
-const im=(f,alt,cls)=>`<div class="ph ${cls||''}"><img src="img/${f}" alt="${alt}" loading="lazy" onerror="this.remove()"></div>`;
+const B='https://queirozdemelo.com.br/wp-content/uploads/2021/08/';
+const im=(f,alt,cls)=>`<div class="ph ${cls||''}"><img src="${B}${f}" alt="${alt}" loading="lazy" onerror="this.remove()"></div>`;
 const EMP=[
  {id:'estancia-queiroz-de-melo',nome:'Estância Queiroz de Melo',curto:'Queiroz de Melo',cidade:'Patos de Minas, MG',end:'Rua Major Gote, 2.265, Bairro Queiroz de Melo',metr:'407 m²',status:'',
   frase:'Localização, segurança e lazer no mesmo lugar.',
@@ -194,7 +195,7 @@ const cta=sel=>`<section class="sec cta g"><h2>Agende uma visita.</h2>
  <div class="c2"><p class="lbl">Barretos</p><p>(17) 99645-6899</p></div>
  <div class="c3"><p class="lbl">WhatsApp</p><p><a class="ln" href="${wa(sel)}">Iniciar conversa</a></p></div>
  <div class="c4"><p class="lbl">Sede</p><p>Rua Tiradentes, 611<br>Patos de Minas, MG</p></div></section>`;
-const rows=()=>EMP.map(e=>`<a class="row" href="#${e.id}" data-img="img/${e.fotos[0]}">${im(e.fotos[0],e.nome,'thumb')}<span class="nm">${e.nome}</span><span>${e.cidade}</span><span class="lbl" style="font-size:15px">${e.status||'Status a definir'}</span><span class="go">Ver empreendimento</span></a>`).join('');
+const rows=()=>EMP.map(e=>`<a class="row" href="#${e.id}" data-img="${B}${e.fotos[0]}">${im(e.fotos[0],e.nome,'thumb')}<span class="nm">${e.nome}</span><span>${e.cidade}</span><span class="lbl" style="font-size:15px">${e.status||'Status a definir'}</span><span class="go">Ver empreendimento</span></a>`).join('');
 const V={
 home:()=>{const a=EMP[1],b=EMP[0],c=EMP[2];return `
 <section class="cover">${im(a.fotos[0],'Estância das Águas')}<div class="txt g"><h1>Lugares feitos<br>para viver bem.</h1><p>Empreendimentos em Patos de Minas e Barretos, desde 1999.</p><span class="scroll">Role para descobrir</span></div></section>

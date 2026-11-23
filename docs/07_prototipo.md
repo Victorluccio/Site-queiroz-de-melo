@@ -43,4 +43,4 @@ Mudanças, com base no complemento da etapa 02:
 7. Contato com a chamada "Agende uma visita".
 8. Página de empreendimento com ficha técnica em linhas finas e mosaico de fotos.
 
-As fotos ficam na pasta prototipo/img, com o mesmo nome do arquivo no site atual.
+As fotos são carregadas direto do site atual da Queiroz de Melo. Para ver, o arquivo prototipo/index.html é aberto no navegador do computador. O link privado do Claude não serve para esta versão, porque bloqueia imagens de outros sites.
