@@ -52,7 +52,8 @@ site/
 - Bloqueio de indexação no Google (o demonstrativo não deve aparecer em buscas).
 
 ### Hospedagem e endereço
-- Ponto em aberto. Ver seção 3.
+- Revisão interna (Victor): página publicada como artefato privado do Claude, com link só para o Victor.
+- Link para o cliente: definido antes da apresentação. Sugestão: Netlify gratuito, ligado ao repositório privado.
 
 ## 2. Proposta para o site completo (após contratação)
 
@@ -70,10 +71,10 @@ Não é decisão agora. Fica registrada para a proposta comercial.
 
 ## 3. Ponto em aberto
 
-1. Onde o demonstrativo vai ficar hospedado e qual link será enviado ao Arnaldo.
+1. Link final para o cliente. Será definido antes da apresentação.
 
 ## 4. Atenção sobre o repositório
 
 O repositório Site-queiroz-de-melo está público.
 Qualquer pessoa pode ler os documentos, inclusive a análise dos problemas do site atual da Queiroz de Melo.
-Recomendação: deixar o repositório privado antes de enviar qualquer link ao cliente.
+Decisão: o repositório passa a ser privado. A mudança é feita pelo Victor nas configurações do GitHub.

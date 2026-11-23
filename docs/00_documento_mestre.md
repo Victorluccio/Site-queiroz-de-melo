@@ -20,8 +20,8 @@ O novo site será levado ao cliente como demonstrativo visual na prospecção.
 | 03 | Processo de entrega | Aprovada em 23/11/2026 |
 | 04 | Escopo: páginas, funções e o que fica fora | Aprovada em 23/11/2026 |
 | 05 | Conteúdo: mapa do site, textos, fotos e dados de cada empreendimento | Aprovada em 23/11/2026 |
-| 06 | Arquitetura: tecnologia, hospedagem, domínio, painel de edição, formulários, SEO | Em andamento |
-| 07 | Protótipo navegável | Pendente |
+| 06 | Arquitetura: tecnologia, hospedagem, domínio, painel de edição, formulários, SEO | Aprovada em 23/11/2026 |
+| 07 | Protótipo navegável | Em andamento |
 | 08 | Plano de entregas | Pendente |
 | 09 | Construção e publicação | Pendente |
 
@@ -44,12 +44,15 @@ D11 (23/11/2026): o demonstrativo representa a empresa e apresenta os três empr
 D12 (23/11/2026): etapa 04 aprovada. Demonstrativo com 7 páginas: Home, Sobre, Empreendimentos, as três páginas de empreendimento e Contato.
 D13 (23/11/2026): no demonstrativo, a sede aparece como Rua Tiradentes, 611, endereço que está no rodapé de todas as páginas do site atual.
 D14 (23/11/2026): etapa 05 aprovada.
+D15 (23/11/2026): repositório passa a ser privado.
+D16 (23/11/2026): revisão interna do demonstrativo por link privado do Claude. O link para o cliente será definido antes da apresentação.
+D17 (23/11/2026): etapa 06 aprovada.
 
 ## Pontos em aberto
 
 Da etapa 06:
-- Hospedagem e link do demonstrativo.
-- Repositório público. Recomendado deixar privado antes de enviar link ao cliente.
+- Link final do demonstrativo para o cliente.
+- Victor mudar o repositório para privado no GitHub.
 
 Para confirmar com o cliente (não travam o demonstrativo):
 1. Se os três empreendimentos são loteamentos fechados ou se há casas e apartamentos.
@@ -62,4 +65,4 @@ Para confirmar com o cliente (não travam o demonstrativo):
 
 ## Próximo passo
 
-Definir a hospedagem do demonstrativo e aprovar a etapa 06.
+Montar o protótipo navegável (etapa 07).
