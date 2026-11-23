@@ -52,11 +52,11 @@ nav.main a.on::after{content:"";position:absolute;left:50%;bottom:-2px;width:14p
 .inst h2{font-size:clamp(34px,3.8vw,58px)}
 .inst .cap{color:var(--gold)}
 .inst .txt p{color:#cfd8d1;max-width:46ch}
-.inst .ph{aspect-ratio:16/10;margin-bottom:-120px;box-shadow:0 30px 60px rgba(0,0,0,.25);z-index:2}
+.inst .ph{aspect-ratio:16/10;margin-bottom:-90px;box-shadow:0 30px 60px rgba(0,0,0,.25);z-index:2}
 .inst .facts{display:flex;gap:clamp(28px,5vw,72px);flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid rgba(215,174,0,.45)}
 .inst .facts b{display:block;font:400 34px/1 Marcellus,serif;color:#fff;margin-bottom:6px}
 .inst .facts span{font-size:14px;color:#b8c4bb}
-.after-inst{height:120px;background:#fff}
+.after-inst{height:150px;background:#fff}
 .stack-head{padding-block:clamp(70px,8vw,120px) clamp(30px,4vw,56px);display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
 .stack-head h2{font-size:clamp(36px,4.4vw,68px);color:var(--g)}
 .stack-head p{max-width:40ch;color:var(--mute);margin:0}
@@ -78,6 +78,36 @@ nav.main a.on::after{content:"";position:absolute;left:50%;bottom:-2px;width:14p
 .btn.gold:hover{background:#fff;border-color:#fff}
 .btn.line:hover{background:#fff;color:var(--g)}
 .lam .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.lead-band{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding-block:clamp(36px,5vw,64px) clamp(24px,3vw,40px)}
+.lead-band h1{font-size:clamp(36px,4.6vw,72px);color:var(--g);max-width:22ch}
+.lead-band p{margin:0;max-width:34ch;color:var(--mute)}
+.tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));height:calc(100svh - var(--hd) - 40px);min-height:600px;max-height:900px;background:var(--g2)}
+.pan{position:relative;overflow:hidden;color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(28px,3vw,48px) clamp(20px,2.6vw,40px);border-left:1px solid rgba(215,174,0,.55)}
+.pan:first-child{border-left:0}
+.pan .ph{position:absolute;inset:0;z-index:0;background:#2b3a2f}
+.pan .ph img{transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.pan:hover .ph img{transform:scale(1.06)}
+.pan .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,25,10,.55) 0%,rgba(0,25,10,.15) 35%,rgba(0,25,10,.2) 55%,rgba(0,25,10,.88) 100%)}
+.pan>*:not(.ph){position:relative;z-index:1}
+.pan .top{display:flex;justify-content:space-between;gap:12px}
+.pan .top .cap{color:#e6ebe6}
+.pan .lg{height:clamp(110px,11vw,160px);display:flex;align-items:center;justify-content:center;margin-block:auto}
+.pan .lg{position:relative}.pan .lg::before{content:"";position:absolute;inset:-40% -10%;background:radial-gradient(closest-side,rgba(0,25,10,.55),rgba(0,25,10,0));z-index:-1}
+.pan .lg img{width:min(64%,300px);height:auto;max-height:150px;object-fit:contain;filter:drop-shadow(0 2px 12px rgba(0,0,0,.45))}
+.pan .bot{border-top:1px solid rgba(215,174,0,.7);padding-top:18px}
+.pan .bot h2{font-size:clamp(24px,2.2vw,34px);margin-bottom:6px}
+.pan .bot p{margin:0 0 16px;color:#d5ddd6;font-size:15px;min-height:3em}
+.pan .go{font:500 12px Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.pan:hover .go{color:#fff}
+.cmp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.cmp>div{padding:22px clamp(20px,2.6vw,40px);min-width:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.cmp>div:nth-child(3n+1){border-left:0}
+.cmp .cap{display:block;color:var(--gold);margin-bottom:6px;font-size:11px}
+.cmp .v{font-size:17px}
+.cmp-h{padding-block:clamp(56px,6vw,90px) 24px;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.cmp-h h2{font-size:clamp(30px,3.4vw,52px);color:var(--g)}
+.cmp-h p{margin:0;color:var(--mute);max-width:40ch}
+.also{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));height:62svh;min-height:440px}
 .dif{background:var(--ivory);position:relative;z-index:5;padding-block:clamp(80px,10vw,140px)}
 .dif h2{font-size:clamp(34px,3.8vw,58px);color:var(--g);max-width:16ch}
 .dif .cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,48px);margin-top:56px}
@@ -142,6 +172,9 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offse
  .mnav a{font:400 34px Marcellus,serif;color:var(--g);padding:6px 0}
  .mnav .tel2{margin-top:24px;font-size:18px;color:var(--ink)}
  .inst .grid,.cta .grid,.ficha,.loc,.laz .grid,.lam .in{grid-template-columns:minmax(0,1fr)}
+ .tri,.also{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;height:78svh;min-height:540px}
+ .tri .pan,.also .pan{flex:0 0 86%;scroll-snap-align:start}
+ .cmp{grid-template-columns:repeat(3,minmax(220px,1fr));overflow-x:auto}
  .inst .ph{margin-bottom:-80px}.after-inst{height:80px}
  .dif .cols{grid-template-columns:repeat(2,minmax(0,1fr))}
  footer .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -197,17 +230,17 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offse
 const TBD='<span class="tbd">a definir com a Queiroz de Melo</span>';
 const im=(f,alt,cls)=>`<div class="ph ${cls||''}"><img src="img/${f}" alt="${alt}" loading="lazy"></div>`;
 const EMP=[
- {id:'estancia-queiroz-de-melo',pre:'Estância',nome:'Queiroz de Melo',cidade:'Patos de Minas, MG',end:'Rua Major Gote, 2.265, Bairro Queiroz de Melo',metr:'407 m²',status:'',logo:'',
+ {id:'estancia-queiroz-de-melo',pre:'Estância',nome:'Queiroz de Melo',cidade:'Patos de Minas, MG',end:'Rua Major Gote, 2.265, Bairro Queiroz de Melo',metr:'407 m²',status:'',logo:'logo-qm.png',verde:'11.388,62 m²',dest:'Portaria de 183 m², quadras de tênis e poliesportiva, parque infantil',
   frase:'Localização, segurança e lazer no mesmo lugar.',
   texto:'Um endereço próximo a colégios, universidades e comércio, com portaria de 183 m², mais de 11 mil m² de área verde e muro em todo o perímetro.',
   lazer:['Portaria de 183 m² com sala de visitas, lavabos e escritório','11.388,62 m² de área verde','Área para caminhada','Quadra de tênis','Quadra poliesportiva','Área de lazer','Parque infantil','Muro em todo o perímetro','Perto de colégios, universidades e comércio'],
   fotos:['qm-avenida-palmeiras.jpg','qm-portaria.jpg','qm-coreto-vista.jpg','qm-capela.jpg','qm-alameda.jpg']},
- {id:'estancia-das-aguas',pre:'Estância',nome:'das Águas',cidade:'Patos de Minas, MG',end:'Av. Thiago Caetano de Menezes, 270, Bairro das Palmeiras',metr:'450 m²',status:'Obras concluídas e entregues',logo:'',
+ {id:'estancia-das-aguas',pre:'Estância',nome:'das Águas',cidade:'Patos de Minas, MG',end:'Av. Thiago Caetano de Menezes, 270, Bairro das Palmeiras',metr:'450 m²',status:'Obras concluídas e entregues',logo:'logo-ag.png',verde:'Ampla área verde',dest:'Academia, quadras de tênis e poliesportiva, portaria',
   frase:'Qualidade de vida com infraestrutura completa.',
   texto:'Localização nobre, ao lado das Chácaras Caiçaras. Obras concluídas e entregues, pronto para receber a sua casa.',
   lazer:['Obras concluídas e entregues','Portaria','Academia','Quadra de tênis','Quadra poliesportiva','Ampla área verde','Ao lado das Chácaras Caiçaras'],
   fotos:['ag-fachada.jpg','ag-quadra-tenis.jpg','ag-entrada.jpg','ag-salao.jpg','ag-quadra.jpg']},
- {id:'estancia-casa-real',pre:'Estância',nome:'Casa Real',cidade:'Barretos, SP',end:'Av. das Nações, 600, City Barretos',metr:'407 m²',status:'Liberado para construir, escritura imediata',logo:'',
+ {id:'estancia-casa-real',pre:'Estância',nome:'Casa Real',cidade:'Barretos, SP',end:'Av. das Nações, 600, City Barretos',metr:'407 m²',status:'Liberado para construir, escritura imediata',logo:'logo-cr.png',verde:'16.000 m²',dest:'Academia, infraestrutura concluída, perto do shopping',
   frase:'Qualidade de vida e modernidade em um único lugar.',
   texto:'Ao lado do City Barretos, perto do shopping e do centro universitário. Infraestrutura concluída, 16.000 m² de área verde e escritura imediata.',
   lazer:['Infraestrutura concluída','Liberado para construir','Escritura imediata','16.000 m² de área verde','Academia','Ao lado do City Barretos','Perto do shopping e do centro universitário'],
@@ -222,7 +255,12 @@ const form=sel=>`<form novalidate>
  <label for="fs${sel}">Empreendimento<select id="fs${sel}"><option value="">Todos</option>${EMP.map(e=>`<option ${e.id===sel?'selected':''}>${full(e)}</option>`).join('')}</select></label>
  <label class="chk"><input type="checkbox"> Aceito o aviso de privacidade.</label>
  <button class="btn send" type="submit">Solicitar contato</button><p class="ok" aria-live="polite"></p></form>`;
-const lams=()=>EMP.map((e,i)=>`<section class="lam" style="z-index:${i+1}">${im(e.fotos[0],full(e))}<div class="w in"><div><span class="cap" style="color:#dfe6e0;display:block;margin-bottom:18px">${e.cidade}</span>${lock(e)}<div class="acts"><a class="btn gold" href="#${e.id}">Conhecer</a><a class="btn line" href="${wa(full(e))}">Agendar visita</a></div></div>
+const pan=e=>`<a class="pan" href="#${e.id}">${im(e.fotos[0],full(e))}<div class="top"><span class="cap">${e.cidade}</span></div><div class="lg"><img src="img/${e.logo}" alt="${full(e)}"></div><div class="bot"><h2>${full(e)}</h2><p>${e.status||'Status a definir com a Queiroz de Melo'}</p><span class="go">Conhecer o empreendimento</span></div></a>`;
+const tri=()=>`<section class="tri">${EMP.map(pan).join('')}</section>`;
+const cmp=()=>{const rows=[['Cidade',e=>e.cidade],['Status',e=>e.status||TBD],['Metragem',e=>e.metr],['Área verde',e=>e.verde],['Destaques',e=>e.dest]];
+ return `<div class="w cmp-h"><h2>Lado a lado.</h2><p>Os três empreendimentos com o mesmo nível de informação, para comparar com clareza.</p></div><div class="cmp">${rows.map(r=>EMP.map(e=>`<div><span class="cap">${r[0]}</span><span class="v">${r[1](e)}</span></div>`).join('')).join('')}</div>`};
+const lams=()=>'';
+const lamsOld=()=>EMP.map((e,i)=>`<section class="lam" style="z-index:${i+1}">${im(e.fotos[0],full(e))}<div class="w in"><div><span class="cap" style="color:#dfe6e0;display:block;margin-bottom:18px">${e.cidade}</span>${lock(e)}<div class="acts"><a class="btn gold" href="#${e.id}">Conhecer</a><a class="btn line" href="${wa(full(e))}">Agendar visita</a></div></div>
  <dl><div><dt>Status</dt><dd>${e.status||TBD}</dd></div><div><dt>Metragem</dt><dd>${e.metr}</dd></div><div><dt>Endereço</dt><dd>${e.end}</dd></div></dl></div></section>`).join('');
 const cta=n=>`<section class="cta"><div class="w grid"><div><span class="cap">Atendimento</span><span class="rule"></span><h2>Agende uma visita.</h2></div>
  <ul><li><span>Patos de Minas</span><span>(34) 3821-2727</span></li><li><span>Barretos</span><span>(17) 99645-6899</span></li><li><span>WhatsApp</span><a class="uline" href="${wa(n)}">Iniciar conversa</a></li><li><span>Sede</span><span>Rua Tiradentes, 611</span></li></ul></div></section>`;
@@ -232,12 +270,11 @@ const dif=`<section class="dif"><div class="w"><span class="cap" style="color:va
  <div><h3>Área verde</h3><p>Mais de 11 mil m² na Estância Queiroz de Melo e 16 mil m² na Estância Casa Real.</p></div>
  <div><h3>Segurança</h3><p>Portaria e muro em todo o perímetro.</p></div></div></div></section>`;
 const V={
-home:()=>`<section class="cover">${im(EMP[0].fotos[0],'Estância Queiroz de Melo')}<div class="w in"><span class="cap">Patos de Minas e Barretos</span><span class="rule"></span><h1>Lugares feitos para viver bem.</h1><p style="margin-top:22px">Empreendimentos com segurança, área verde e lazer completo, desde 1999.</p></div></section>
+home:()=>`<div class="w lead-band"><h1>Três endereços. Um só padrão de excelência.</h1><p>Empreendimentos em Patos de Minas e Barretos, com segurança, área verde e lazer completo. Desde 1999.</p></div>${tri()}${cmp()}<div style="height:clamp(80px,9vw,130px)"></div>
 <section class="inst"><div class="w grid"><div class="txt"><span class="cap">A empresa</span><span class="rule"></span><h2>Padrão Queiroz de Melo de Qualidade.</h2><p style="margin-top:24px">Há mais de 25 anos criamos empreendimentos pensados para durar. Projetos arrojados, cuidado com o meio ambiente e compromisso com prazo.</p><p>A credibilidade construída nesse tempo é o nosso maior patrimônio.</p>
  <div class="facts"><div><b>1999</b><span>fundação</span></div><div><b>Patos de Minas</b><span>e Barretos</span></div></div></div>${im(EMP[0].fotos[1],'Portaria da Estância Queiroz de Melo')}</div></section><div class="after-inst"></div>
-<div class="w stack-head"><h2>Nossos empreendimentos</h2><p>Três endereços, um mesmo padrão. Role para conhecer cada um.</p></div>
-${lams()}${dif}${cta('')}`,
-empreendimentos:()=>`<div class="w page-top"><span class="cap" style="color:var(--gold)">Portfólio</span><span class="rule"></span><h1>Empreendimentos</h1></div>${lams()}${cta('')}`,
+${cta('')}`,
+empreendimentos:()=>`<div class="w lead-band"><h1>Empreendimentos</h1><p>Três endereços com o mesmo padrão Queiroz de Melo.</p></div>${tri()}${cmp()}<div style="height:clamp(80px,9vw,130px)"></div>${cta('')}`,
 sobre:()=>`<section class="cover" style="height:72svh">${im(EMP[0].fotos[4],'Estância Queiroz de Melo')}<div class="w in"><span class="cap">Nossa história</span><span class="rule"></span><h1>Desde 1999.</h1></div></section>
 <section class="w ficha"><div><span class="cap" style="color:var(--gold)">Quem somos</span><span class="rule"></span><h2>Grandes empreendimentos nas cidades onde atuamos.</h2></div><div><p class="lead">Fundada em 6 de julho de 1999, a Queiroz de Melo Empreendimentos é conhecida por projetos de excelência.</p><p style="color:var(--mute)">Preocupação com o impacto ambiental e pontualidade nas entregas fazem parte de cada projeto. Nosso compromisso é com a satisfação dos clientes, o retorno aos investidores e o desenvolvimento das cidades.</p>
  <dl><div><dt>Visão</dt><dd>Ser reconhecida pela qualidade que imprimimos em tudo o que fazemos.</dd></div><div><dt>Valores</dt><dd>Respeito às pessoas e ao meio ambiente, atuação responsável, transparência, foco no resultado, qualidade e inovação.</dd></div></dl></div></section>${cta('')}`,
@@ -249,7 +286,7 @@ const emp=e=>`<section class="ehero">${im(e.fotos[0],full(e))}<div class="w in">
  <div style="align-self:end"><p class="lead">${e.frase}</p><p style="color:var(--mute)">${e.texto}</p><a class="btn" style="color:var(--g);margin-top:12px" href="${wa(full(e))}">Agendar visita</a></div></section>
 <section class="w mos">${im(e.fotos[1],full(e),'a')}${im(e.fotos[2],full(e),'b')}${im(e.fotos[3],full(e),'c')}${im(e.fotos[4],full(e),'d')}</section>
 <section class="laz"><div class="w grid"><div><span class="cap">Lazer e diferenciais</span><span class="rule"></span><h2>Tudo dentro do seu endereço.</h2></div><ul>${e.lazer.map(x=>`<li>${x}</li>`).join('')}</ul></div></section>
-<section class="w loc"><div><span class="cap" style="color:var(--gold)">Localização</span><span class="rule"></span><h2>${e.end}</h2><p style="margin-top:14px;color:var(--mute)">${e.cidade}</p><a class="uline" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.end+', '+e.cidade)}">Abrir no mapa</a></div>${form(e.id)}</section>${cta(full(e))}`;
+<section class="w loc"><div><span class="cap" style="color:var(--gold)">Localização</span><span class="rule"></span><h2>${e.end}</h2><p style="margin-top:14px;color:var(--mute)">${e.cidade}</p><a class="uline" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.end+', '+e.cidade)}">Abrir no mapa</a></div>${form(e.id)}</section><div class="w cmp-h" style="padding-top:0"><h2>Conheça também.</h2></div><section class="also">${EMP.filter(x=>x!==e).map(pan).join('')}</section>${cta(full(e))}`;
 const app=document.getElementById('app'),hd=document.getElementById('hd'),mn=document.getElementById('mnav'),bg=document.getElementById('bg');
 function show(){const h=location.hash.slice(1)||'home';const e=EMP.find(x=>x.id===h);app.innerHTML=e?emp(e):(V[h]||V.home)();
  const k=e?'empreendimentos':(V[h]?h:'home');document.querySelectorAll('nav.main a').forEach(a=>a.classList.toggle('on',a.dataset.k===k));

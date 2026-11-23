@@ -68,3 +68,18 @@ Mudanças:
 6. Cada empreendimento tem espaço para o próprio logo. Enquanto os logos não chegam, o nome aparece composto em Marcellus.
 
 Logo da Queiroz de Melo tirado do print do site atual, com fundo removido. Para o site final, pedir o arquivo original em vetor.
+
+## Versão 4 (23/11/2026)
+
+Pedido do Victor: os três empreendimentos com a mesma importância, alinhados, sem ficar parecido com o site atual.
+Leitura de marketing aplicada:
+1. Portfólio com peso igual. Empreendimentos empilhados de cima para baixo passam a ideia de ranking. Lado a lado, a leitura é de família de produtos.
+2. Mesma estrutura para todos: foto em tela cheia, logo do tamanho igual, cidade, status e chamada.
+3. Comparação lado a lado. Uma tabela com as mesmas linhas para os três (cidade, status, metragem, área verde, destaques). O comprador compara sem sair da página e a empresa mostra força em conjunto.
+4. A frase de abertura une os três: "Três endereços. Um só padrão de excelência."
+5. Na página de cada empreendimento, o bloco "Conheça também" mostra os outros dois com o mesmo peso.
+
+Diferença para o site atual: lá são três cartões pequenos com texto cortado e formulário embaixo. Aqui o tríptico ocupa a tela inteira, os logos ficam centralizados e a comparação vem logo em seguida.
+No celular, os três ficam em faixa lateral, um ao lado do outro, com o mesmo tamanho.
+
+Logos dos empreendimentos tirados do print do site atual (prototipo/img/logo-qm.png, logo-ag.png e logo-cr.png). Para o site final, pedir os arquivos originais.

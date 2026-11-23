@@ -52,6 +52,7 @@ D19 (23/11/2026): versão 1 do protótipo reprovada por ter cara de IA. Versão 
 D20 (23/11/2026): a versão 2 carrega as fotos direto do site atual e é revisada abrindo o arquivo no navegador.
 D21 (23/11/2026): fotos enviadas pelo Victor por print e incluídas no protótipo, que volta a ser revisado pelo link privado.
 D22 (23/11/2026): versão 3 do protótipo com a marca e as cores do cliente, tipografia Marcellus e Jost, e empreendimentos em camadas de tela cheia.
+D23 (23/11/2026): os três empreendimentos sempre com o mesmo peso, lado a lado, nunca empilhados. Versão 4 com tríptico e comparação lado a lado.
 
 ## Pontos em aberto
 
@@ -71,4 +72,4 @@ Para confirmar com o cliente (não travam o demonstrativo):
 
 ## Próximo passo
 
-Receber os logos dos três empreendimentos, incluir no protótipo e revisar a versão 3.
+Victor revisar a versão 4 do protótipo e aprovar a etapa 07.
