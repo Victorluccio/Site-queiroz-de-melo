@@ -120,3 +120,4 @@ O que foi aplicado:
 9. Barra de progresso em ouro no topo da tela, menu com sublinhado animado, botão "Agendar visita" sempre visível.
 10. Entradas suaves dos blocos e revelação das fotos ao rolar.
 11. Rodapé novo, sem o padrão "copyright e desenvolvido por" do site atual.
+Ajuste (23/11/2026): o mapa do território passou a mostrar o contorno real de Minas Gerais e São Paulo em linha dourada, desenhado ao rolar. Depois a rota liga Barretos a Patos de Minas e os pontos acendem. Contornos tirados da base pública brazil-states.geojson (projeto click_that_hood, Code for Germany) e simplificados para o site.
