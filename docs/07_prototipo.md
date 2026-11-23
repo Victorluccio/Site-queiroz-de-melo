@@ -95,3 +95,5 @@ Pedido do Victor: renovar a marca sem mudar o desenho do logo.
 1. Logo: desenho igual. Verde mais forte e vivo (#00682d), dourado em efeito de lâmina de ouro (gradiente metálico) e vermelho mais vivo (#b2120a). Arquivo: prototipo/img/logo-queiroz-de-melo-novo.png. Comparação: docs/img/logo-antes-depois.png.
 2. Site: verde principal #00682d, filetes e botões em lâmina de ouro, rótulos dourados sobre branco em ouro escuro (#9c7400) para leitura, textos mais escuros e com peso maior.
 3. O logo foi recolorido a partir do print do site atual. Para uso real, a repaginada deve ser refeita sobre o arquivo vetorial original e aprovada pelo cliente.
+
+Ajuste da repaginada (23/11/2026): todos os verdes mais escuros (logo e site em #004a1f, faixas em #00340f). Dourado em lâmina de ouro com degradê vertical, escuro embaixo e claro em cima, no logo e nos botões e filetes do site.
