@@ -18,8 +18,8 @@ O novo site será levado ao cliente como demonstrativo visual na prospecção.
 | 01 | Referência: análise do site atual da Queiroz de Melo | Aprovada em 23/11/2026 |
 | 02 | Referência: sites de incorporadoras de alto padrão | Aprovada em 23/11/2026 |
 | 03 | Processo de entrega | Aprovada em 23/11/2026 |
-| 04 | Escopo: páginas, funções e o que fica fora | Aguardando aprovação |
-| 05 | Conteúdo: mapa do site, textos, fotos e dados de cada empreendimento | Pendente |
+| 04 | Escopo: páginas, funções e o que fica fora | Aprovada em 23/11/2026 |
+| 05 | Conteúdo: mapa do site, textos, fotos e dados de cada empreendimento | Aguardando aprovação |
 | 06 | Arquitetura: tecnologia, hospedagem, domínio, painel de edição, formulários, SEO | Pendente |
 | 07 | Protótipo navegável | Pendente |
 | 08 | Plano de entregas | Pendente |
@@ -41,15 +41,20 @@ D08 (23/11/2026): etapa 02 aprovada.
 D09 (23/11/2026): etapa 03 aprovada.
 D10 (23/11/2026): a entrega agora é um demonstrativo para a prospecção, feito só com dados públicos do site atual. O site completo fica para depois da contratação.
 D11 (23/11/2026): o demonstrativo representa a empresa e apresenta os três empreendimentos. O objetivo é gerar desejo no cliente.
+D12 (23/11/2026): etapa 04 aprovada. Demonstrativo com 7 páginas: Home, Sobre, Empreendimentos, as três páginas de empreendimento e Contato.
+D13 (23/11/2026): no demonstrativo, a sede aparece como Rua Tiradentes, 611, endereço que está no rodapé de todas as páginas do site atual.
 
 ## Pontos em aberto
 
-Para confirmar com o cliente (levantados na etapa 01):
+Para confirmar com o cliente (não travam o demonstrativo):
 1. Se os três empreendimentos são loteamentos fechados ou se há casas e apartamentos.
 2. Se existem outros empreendimentos além dos três do site.
 3. Qual é o endereço oficial da empresa.
-4. Quais são as redes sociais oficiais da Queiroz de Melo.
+4. Quais são o e-mail e as redes sociais oficiais da Queiroz de Melo.
+5. Se a metragem informada é o tamanho do lote.
+6. Status da Estância Queiroz de Melo.
+7. Quantidade de lotes e implantação de cada empreendimento.
 
 ## Próximo passo
 
-Aprovar a etapa 04 e abrir a etapa 05 (conteúdo).
+Aprovar a etapa 05 e abrir a etapa 06 (arquitetura).
