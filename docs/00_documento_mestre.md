@@ -39,6 +39,7 @@ D06 (23/11/2026): etapa 01 aprovada.
 D07 (23/11/2026): referências da etapa 02 são Alphaville Urbanismo, JHSF e Granja Marileusa.
 D08 (23/11/2026): etapa 02 aprovada.
 D09 (23/11/2026): etapa 03 aprovada.
+D10 (23/11/2026): a entrega agora é um demonstrativo para a prospecção (home e uma página de empreendimento), feito só com dados públicos do site atual. O site completo fica para depois da contratação.
 
 ## Pontos em aberto
 
