@@ -83,3 +83,8 @@ Diferença para o site atual: lá são três cartões pequenos com texto cortado
 No celular, os três ficam em faixa lateral, um ao lado do outro, com o mesmo tamanho.
 
 Logos dos empreendimentos tirados do print do site atual (prototipo/img/logo-qm.png, logo-ag.png e logo-cr.png). Para o site final, pedir os arquivos originais.
+
+## Ajustes (23/11/2026)
+
+1. Instagram @estanciacasareal ligado ao ícone do topo, ao rodapé e à página da Estância Casa Real.
+2. Marca d'água "PROTÓTIPO" na diagonal em todas as telas e selo fixo "Protótipo de apresentação" no canto inferior direito, para deixar claro que é demonstrativo.
