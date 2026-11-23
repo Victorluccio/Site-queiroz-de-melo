@@ -19,8 +19,8 @@ O novo site será levado ao cliente como demonstrativo visual na prospecção.
 | 02 | Referência: sites de incorporadoras de alto padrão | Aprovada em 23/11/2026 |
 | 03 | Processo de entrega | Aprovada em 23/11/2026 |
 | 04 | Escopo: páginas, funções e o que fica fora | Aprovada em 23/11/2026 |
-| 05 | Conteúdo: mapa do site, textos, fotos e dados de cada empreendimento | Aguardando aprovação |
-| 06 | Arquitetura: tecnologia, hospedagem, domínio, painel de edição, formulários, SEO | Pendente |
+| 05 | Conteúdo: mapa do site, textos, fotos e dados de cada empreendimento | Aprovada em 23/11/2026 |
+| 06 | Arquitetura: tecnologia, hospedagem, domínio, painel de edição, formulários, SEO | Em andamento |
 | 07 | Protótipo navegável | Pendente |
 | 08 | Plano de entregas | Pendente |
 | 09 | Construção e publicação | Pendente |
@@ -43,8 +43,13 @@ D10 (23/11/2026): a entrega agora é um demonstrativo para a prospecção, feito
 D11 (23/11/2026): o demonstrativo representa a empresa e apresenta os três empreendimentos. O objetivo é gerar desejo no cliente.
 D12 (23/11/2026): etapa 04 aprovada. Demonstrativo com 7 páginas: Home, Sobre, Empreendimentos, as três páginas de empreendimento e Contato.
 D13 (23/11/2026): no demonstrativo, a sede aparece como Rua Tiradentes, 611, endereço que está no rodapé de todas as páginas do site atual.
+D14 (23/11/2026): etapa 05 aprovada.
 
 ## Pontos em aberto
+
+Da etapa 06:
+- Hospedagem e link do demonstrativo.
+- Repositório público. Recomendado deixar privado antes de enviar link ao cliente.
 
 Para confirmar com o cliente (não travam o demonstrativo):
 1. Se os três empreendimentos são loteamentos fechados ou se há casas e apartamentos.
@@ -57,4 +62,4 @@ Para confirmar com o cliente (não travam o demonstrativo):
 
 ## Próximo passo
 
-Aprovar a etapa 05 e abrir a etapa 06 (arquitetura).
+Definir a hospedagem do demonstrativo e aprovar a etapa 06.
