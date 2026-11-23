@@ -92,3 +92,32 @@ Estas são sugestões. A decisão fica para a etapa 04.
 - granjamarileusa.com.br
 - Material de venda do Alphaville Aracaju (ficha técnica e lazer)
 - Material de venda da Fazenda Boa Vista
+
+## 9. Complemento (23/11/2026): padrões visuais do alto padrão
+
+Pesquisa feita depois da primeira versão do protótipo, que ficou com cara de layout genérico.
+
+### O que os sites de alto padrão fazem
+1. Fotografia profissional em tela cheia, de ponta a ponta, sem moldura. É o item que mais pesa.
+2. Navegação discreta: logo pequeno e um botão "Menu" que abre a tela inteira.
+3. Título grande em dois níveis, com subtítulo curto e secundário.
+4. Paleta contida: branco, preto e, no máximo, uma cor da marca. A foto carrega a cor.
+5. Grade editorial assimétrica, com muito espaço vazio e tipografia grande.
+6. Ritmo lento: uma ideia por tela.
+7. Para loteamentos (caso da Legacy Incorporadora, que vende lotes): confiança é o design. Status de venda em todo empreendimento, trajetória logo no início e segurança jurídica como mensagem central.
+8. Cada empreendimento com página própria e os dados que o comprador procura primeiro.
+9. Chamada de contato discreta e direta, como "Agende uma visita".
+
+### O que deixa o layout com cara de IA (evitar)
+1. Ilustração vetorial no lugar de foto.
+2. Cards com borda em grade de três colunas.
+3. Faixa de números grandes (ano, quantidade, cidades) logo abaixo da capa.
+4. Painel colorido sobreposto à imagem da capa.
+5. Combinação verde-escuro com dourado e fonte serifada de template.
+6. Blocos sempre divididos ao meio (título de um lado, texto do outro).
+7. Botão de WhatsApp grande e chamativo flutuando.
+
+### Fontes
+- Framer Community: site da Legacy Incorporadora (bairros planejados e lotes).
+- Meio & Mensagem: novo site da Tegra para o alto padrão.
+- Guias de design de sites imobiliários de luxo (Luxury Presence, Magier, WPResidence, DesignRush).
