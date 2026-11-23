@@ -14,7 +14,7 @@
    COLOUR as cores do brasão: verde #00451a dominante, ouro #d7ae00 em filetes, vermelho só no logo; branco e marfim
    TYPE   Marcellus (romana de inscrição, parente das letras do logo) nos títulos; Jost no texto e nos rótulos
    LAYOUT topo branco como o site da empresa; lâminas de tela cheia empilhadas; ficha técnica e mosaico nas páginas */
-:root{--g:#004a1f;--g2:#00340f;--gold:#e2b520;--goldt:#9c7400;--leaf:url(img/ouro.jpg) center/cover;--ink:#0b140e;--mute:#3f4a43;--ivory:#f6f3ec;--line:#e3dfd5;--hd:88px}
+:root{--g:#004a1f;--g2:#00340f;--gold:#e2b520;--goldt:#9c7400;--leaf:linear-gradient(to top,#4a1c00 0%,#8c5406 22%,#c98e1e 46%,#eebf4a 68%,#ffe9a0 86%,#fffadc 100%);--ink:#0b140e;--mute:#3f4a43;--ivory:#f6f3ec;--line:#e3dfd5;--hd:88px}
 *{box-sizing:border-box;min-width:0}
 html{scroll-padding-top:var(--hd)}
 body{margin:0;background:#fff;color:var(--ink);font:400 17px/1.65 Jost,system-ui,sans-serif;overflow-x:clip}
@@ -26,7 +26,7 @@ p{margin:0 0 1em}
 .w{max-width:1320px;margin:0 auto;padding-inline:max(4vw,18px)}
 .ph{position:relative;overflow:hidden;background:#cfd3cc}
 .ph img{width:100%;height:100%;object-fit:cover}
-.rule{display:block;width:64px;height:3px;background:var(--leaf);margin:22px 0}
+.rule{display:block;width:64px;height:3px;background:linear-gradient(to right,#8c5406,#eebf4a 60%,#fff0b0);margin:22px 0}
 header{position:sticky;top:0;z-index:40;background:#fff;height:var(--hd);border-bottom:1px solid transparent;transition:border-color .3s}
 header.sc{border-color:var(--line)}
 .hb{height:100%;display:flex;align-items:center;gap:clamp(20px,4vw,64px)}
@@ -74,7 +74,7 @@ nav.main a.on::after{content:"";position:absolute;left:50%;bottom:-2px;width:14p
 .lam dd{margin:0}
 .lam .tbd{color:#c8d2ca}
 .btn{display:inline-flex;align-items:center;gap:14px;min-height:50px;padding:0 28px;font:500 13px Jost,sans-serif;letter-spacing:.18em;text-transform:uppercase;border:1px solid currentColor;transition:background .25s,color .25s}
-.btn.gold{background:var(--leaf);border-color:#9c6a08;color:#1b1406;text-shadow:0 1px 0 rgba(255,240,180,.45)}
+.btn.gold{background:var(--leaf);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 6px 18px rgba(0,0,0,.25);border-color:#9c6a08;color:#1b1406;text-shadow:0 1px 0 rgba(255,240,180,.45)}
 .btn.gold:hover{background:#fff;border-color:#fff}
 .btn.line:hover{background:#fff;color:var(--g)}
 .lam .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
