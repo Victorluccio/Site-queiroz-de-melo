@@ -17,7 +17,7 @@ O novo site será levado ao cliente como demonstrativo visual na prospecção.
 | 00 | Documento mestre | Em andamento |
 | 01 | Referência: análise do site atual da Queiroz de Melo | Pendente |
 | 02 | Referência: sites de incorporadoras de alto padrão | Pendente |
-| 03 | Processo de entrega (cópia do app-agro) | Pendente |
+| 03 | Processo de entrega | Pendente |
 | 04 | Escopo: páginas, funções e o que fica fora | Pendente |
 | 05 | Conteúdo: mapa do site, textos, fotos e dados de cada empreendimento | Pendente |
 | 06 | Arquitetura: tecnologia, hospedagem, domínio, painel de edição, formulários, SEO | Pendente |
@@ -32,11 +32,11 @@ Nenhum código antes de fechar as etapas de 00 a 08.
 
 D01 (23/11/2026): o projeto segue o método de trabalho do app-agro.
 D02 (23/11/2026): repositório criado em github.com/Victorluccio/Site-queiroz-de-melo.
+D03 (23/11/2026): do app-agro vem só o método de trabalho. O processo de entrega (03) será escrito do zero para este projeto, no mesmo padrão de uma empresa de desenvolvimento.
 
 ## Pontos em aberto
 
 1. Endereço do site atual da Queiroz de Melo.
-2. Cópia do 03_modelo_processo_entrega.md do app-agro.
 
 ## Próximo passo
 
