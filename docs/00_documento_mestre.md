@@ -54,6 +54,7 @@ D21 (23/11/2026): fotos enviadas pelo Victor por print e incluídas no protótip
 D22 (23/11/2026): versão 3 do protótipo com a marca e as cores do cliente, tipografia Marcellus e Jost, e empreendimentos em camadas de tela cheia.
 D23 (23/11/2026): os três empreendimentos sempre com o mesmo peso, lado a lado, nunca empilhados. Versão 4 com tríptico e comparação lado a lado.
 D24 (23/11/2026): proposta de repaginada da marca só nas cores (desenho do logo mantido): verde mais forte, dourado em lâmina de ouro, vermelho mais vivo e textos mais fortes no site.
+D25 (23/11/2026): logo volta ao original no protótipo. A repaginada fica guardada como opção.
 
 ## Pontos em aberto
 
