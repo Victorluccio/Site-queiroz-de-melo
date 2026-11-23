@@ -16,8 +16,8 @@ O novo site será levado ao cliente como demonstrativo visual na prospecção.
 |---|---|---|
 | 00 | Documento mestre | Aprovada em 23/11/2026 |
 | 01 | Referência: análise do site atual da Queiroz de Melo | Aprovada em 23/11/2026 |
-| 02 | Referência: sites de incorporadoras de alto padrão | Aguardando aprovação |
-| 03 | Processo de entrega | Pendente |
+| 02 | Referência: sites de incorporadoras de alto padrão | Aprovada em 23/11/2026 |
+| 03 | Processo de entrega | Aguardando aprovação |
 | 04 | Escopo: páginas, funções e o que fica fora | Pendente |
 | 05 | Conteúdo: mapa do site, textos, fotos e dados de cada empreendimento | Pendente |
 | 06 | Arquitetura: tecnologia, hospedagem, domínio, painel de edição, formulários, SEO | Pendente |
@@ -37,6 +37,7 @@ D04 (23/11/2026): site atual da empresa em queirozdemelo.com.br. Página de refe
 D05 (23/11/2026): etapa 00 aprovada.
 D06 (23/11/2026): etapa 01 aprovada.
 D07 (23/11/2026): referências da etapa 02 são Alphaville Urbanismo, JHSF e Granja Marileusa.
+D08 (23/11/2026): etapa 02 aprovada.
 
 ## Pontos em aberto
 
@@ -48,4 +49,4 @@ Para confirmar com o cliente (levantados na etapa 01):
 
 ## Próximo passo
 
-Aprovar a etapa 02 e abrir a etapa 03 (processo de entrega).
+Aprovar a etapa 03 e abrir a etapa 04 (escopo).
