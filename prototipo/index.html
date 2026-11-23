@@ -14,10 +14,10 @@
    COLOUR as cores do brasão: verde #00451a dominante, ouro #d7ae00 em filetes, vermelho só no logo; branco e marfim
    TYPE   Marcellus (romana de inscrição, parente das letras do logo) nos títulos; Jost no texto e nos rótulos
    LAYOUT topo branco como o site da empresa; lâminas de tela cheia empilhadas; ficha técnica e mosaico nas páginas */
-:root{--g:#00451a;--g2:#003313;--gold:#d7ae00;--ink:#16211a;--mute:#66706a;--ivory:#f6f3ec;--line:#e3dfd5;--hd:88px}
+:root{--g:#00682d;--g2:#004a20;--gold:#e2b520;--goldt:#9c7400;--leaf:linear-gradient(115deg,#a0700a 0%,#ecc44a 22%,#ffec96 40%,#d6a01c 55%,#f6d260 78%,#966808 100%);--ink:#0b140e;--mute:#3f4a43;--ivory:#f6f3ec;--line:#e3dfd5;--hd:88px}
 *{box-sizing:border-box;min-width:0}
 html{scroll-padding-top:var(--hd)}
-body{margin:0;background:#fff;color:var(--ink);font:300 17px/1.65 Jost,system-ui,sans-serif;overflow-x:clip}
+body{margin:0;background:#fff;color:var(--ink);font:400 17px/1.65 Jost,system-ui,sans-serif;overflow-x:clip}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 h1,h2,h3,.disp{font-family:Marcellus,"Trajan Pro",Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:.005em;margin:0}
@@ -26,13 +26,13 @@ p{margin:0 0 1em}
 .w{max-width:1320px;margin:0 auto;padding-inline:max(4vw,18px)}
 .ph{position:relative;overflow:hidden;background:#cfd3cc}
 .ph img{width:100%;height:100%;object-fit:cover}
-.rule{display:block;width:56px;height:1px;background:var(--gold);margin:22px 0}
+.rule{display:block;width:64px;height:2px;background:var(--leaf);margin:22px 0}
 header{position:sticky;top:0;z-index:40;background:#fff;height:var(--hd);border-bottom:1px solid transparent;transition:border-color .3s}
 header.sc{border-color:var(--line)}
 .hb{height:100%;display:flex;align-items:center;gap:clamp(20px,4vw,64px)}
 .logo img{height:58px;width:auto}
 nav.main{display:flex;gap:clamp(18px,3vw,48px);margin-right:auto}
-nav.main a{position:relative;font:400 16px Jost,sans-serif;color:#9aa19c;padding:10px 0;transition:color .2s}
+nav.main a{position:relative;font:500 16px Jost,sans-serif;color:#56605a;padding:10px 0;transition:color .2s}
 nav.main a:hover,nav.main a.on{color:var(--g)}
 nav.main a.on::after{content:"";position:absolute;left:50%;bottom:-2px;width:14px;height:5px;margin-left:-7px;border-radius:3px;background:var(--g)}
 .tel{font:400 18px Jost,sans-serif;white-space:nowrap;display:flex;align-items:center;gap:8px}
@@ -51,7 +51,7 @@ nav.main a.on::after{content:"";position:absolute;left:50%;bottom:-2px;width:14p
 .inst .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
 .inst h2{font-size:clamp(34px,3.8vw,58px)}
 .inst .cap{color:var(--gold)}
-.inst .txt p{color:#cfd8d1;max-width:46ch}
+.inst .txt p{color:#e3ebe4;max-width:46ch}
 .inst .ph{aspect-ratio:16/10;margin-bottom:-90px;box-shadow:0 30px 60px rgba(0,0,0,.25);z-index:2}
 .inst .facts{display:flex;gap:clamp(28px,5vw,72px);flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid rgba(215,174,0,.45)}
 .inst .facts b{display:block;font:400 34px/1 Marcellus,serif;color:#fff;margin-bottom:6px}
@@ -74,7 +74,7 @@ nav.main a.on::after{content:"";position:absolute;left:50%;bottom:-2px;width:14p
 .lam dd{margin:0}
 .lam .tbd{color:#c8d2ca}
 .btn{display:inline-flex;align-items:center;gap:14px;min-height:50px;padding:0 28px;font:500 13px Jost,sans-serif;letter-spacing:.18em;text-transform:uppercase;border:1px solid currentColor;transition:background .25s,color .25s}
-.btn.gold{background:var(--gold);border-color:var(--gold);color:#1b1a10}
+.btn.gold{background:var(--leaf);border-color:#d6a01c;color:#1b1406}
 .btn.gold:hover{background:#fff;border-color:#fff}
 .btn.line:hover{background:#fff;color:var(--g)}
 .lam .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
@@ -94,15 +94,15 @@ nav.main a.on::after{content:"";position:absolute;left:50%;bottom:-2px;width:14p
 .pan .lg{height:clamp(110px,11vw,160px);display:flex;align-items:center;justify-content:center;margin-block:auto}
 .pan .lg{position:relative}.pan .lg::before{content:"";position:absolute;inset:-40% -10%;background:radial-gradient(closest-side,rgba(0,25,10,.55),rgba(0,25,10,0));z-index:-1}
 .pan .lg img{width:min(64%,300px);height:auto;max-height:150px;object-fit:contain;filter:drop-shadow(0 2px 12px rgba(0,0,0,.45))}
-.pan .bot{border-top:1px solid rgba(215,174,0,.7);padding-top:18px}
+.pan .bot{border-top:2px solid transparent;border-image:var(--leaf) 1;padding-top:18px}
 .pan .bot h2{font-size:clamp(24px,2.2vw,34px);margin-bottom:6px}
-.pan .bot p{margin:0 0 16px;color:#d5ddd6;font-size:15px;min-height:3em}
+.pan .bot p{margin:0 0 16px;color:#eef3ee;font-size:15px;min-height:3em}
 .pan .go{font:500 12px Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 .pan:hover .go{color:#fff}
 .cmp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line)}
 .cmp>div{padding:22px clamp(20px,2.6vw,40px);min-width:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
 .cmp>div:nth-child(3n+1){border-left:0}
-.cmp .cap{display:block;color:var(--gold);margin-bottom:6px;font-size:11px}
+.cmp .cap{display:block;color:var(--goldt);margin-bottom:6px;font-size:11px}
 .cmp .v{font-size:17px}
 .cmp-h{padding-block:clamp(56px,6vw,90px) 24px;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
 .cmp-h h2{font-size:clamp(30px,3.4vw,52px);color:var(--g)}
@@ -111,7 +111,7 @@ nav.main a.on::after{content:"";position:absolute;left:50%;bottom:-2px;width:14p
 .dif{background:var(--ivory);position:relative;z-index:5;padding-block:clamp(80px,10vw,140px)}
 .dif h2{font-size:clamp(34px,3.8vw,58px);color:var(--g);max-width:16ch}
 .dif .cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,48px);margin-top:56px}
-.dif .cols div{border-top:1px solid var(--gold);padding-top:22px}
+.dif .cols div{border-top:2px solid transparent;border-image:var(--leaf) 1;padding-top:22px}
 .dif h3{font-size:24px;color:var(--g);margin-bottom:10px}
 .dif p{color:var(--mute);font-size:16px;margin:0}
 .cta{background:var(--g2);color:#fff;position:relative;z-index:5;padding-block:clamp(80px,10vw,140px)}
@@ -121,7 +121,7 @@ nav.main a.on::after{content:"";position:absolute;left:50%;bottom:-2px;width:14p
 .cta ul{list-style:none;margin:0;padding:0}
 .cta li{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.16)}
 .cta li span:first-child{font:500 12px/2 Jost,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#a9b8ad}
-footer{background:#001f0b;color:#b8c4bb;position:relative;z-index:5;padding-block:64px 28px;font-size:15px}
+footer{background:#002a10;color:#b8c4bb;position:relative;z-index:5;padding-block:64px 28px;font-size:15px}
 footer .grid{display:grid;grid-template-columns:minmax(0,4fr) repeat(3,minmax(0,2fr));gap:40px}
 footer img{height:64px;width:auto;margin-bottom:18px}
 footer h4{font:500 12px Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
@@ -156,9 +156,9 @@ footer .note{margin-top:48px;padding-top:18px;border-top:1px solid rgba(255,255,
 .uline{border-bottom:1px solid var(--gold);padding-bottom:3px}
 form{display:grid;gap:22px}
 label{display:grid;gap:2px;font:500 12px Jost,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
-input,select{font:300 17px Jost,sans-serif;color:var(--ink);background:transparent;border:0;border-bottom:1px solid #c9c5bb;padding:10px 0;border-radius:0;width:100%;letter-spacing:0;text-transform:none}
+input,select{font:400 17px Jost,sans-serif;color:var(--ink);background:transparent;border:0;border-bottom:1px solid #c9c5bb;padding:10px 0;border-radius:0;width:100%;letter-spacing:0;text-transform:none}
 input:focus,select:focus{outline:none;border-color:var(--g)}
-.chk{display:flex;gap:10px;align-items:center;letter-spacing:0;text-transform:none;font:300 15px Jost,sans-serif;color:var(--ink)}
+.chk{display:flex;gap:10px;align-items:center;letter-spacing:0;text-transform:none;font:400 15px Jost,sans-serif;color:var(--ink)}
 .chk input{width:18px;height:18px}
 .send{justify-self:start;background:var(--g);color:#fff;border-color:var(--g);cursor:pointer}
 .ok{font-size:15px;color:var(--mute)}
@@ -195,7 +195,7 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offse
 <body>
 <header id="hd">
   <div class="w hb">
-    <a class="logo" href="#home"><img src="img/logo-queiroz-de-melo.png" alt="Queiroz de Melo Empreendimentos"></a>
+    <a class="logo" href="#home"><img src="img/logo-queiroz-de-melo-novo.png" alt="Queiroz de Melo Empreendimentos"></a>
     <nav class="main">
       <a href="#home" data-k="home">Home</a>
       <a href="#sobre" data-k="sobre">Sobre nós</a>
@@ -267,7 +267,7 @@ const lamsOld=()=>EMP.map((e,i)=>`<section class="lam" style="z-index:${i+1}">${
  <dl><div><dt>Status</dt><dd>${e.status||TBD}</dd></div><div><dt>Metragem</dt><dd>${e.metr}</dd></div><div><dt>Endereço</dt><dd>${e.end}</dd></div></dl></div></section>`).join('');
 const cta=n=>`<section class="cta"><div class="w grid"><div><span class="cap">Atendimento</span><span class="rule"></span><h2>Agende uma visita.</h2></div>
  <ul><li><span>Patos de Minas</span><span>(34) 3821-2727</span></li><li><span>Barretos</span><span>(17) 99645-6899</span></li><li><span>WhatsApp</span><a class="uline" href="${wa(n)}">Iniciar conversa</a></li><li><span>Sede</span><span>Rua Tiradentes, 611</span></li></ul></div></section>`;
-const dif=`<section class="dif"><div class="w"><span class="cap" style="color:var(--gold)">Padrão Queiroz de Melo</span><span class="rule"></span><h2>O que cada endereço entrega.</h2>
+const dif=`<section class="dif"><div class="w"><span class="cap" style="color:var(--goldt)">Padrão Queiroz de Melo</span><span class="rule"></span><h2>O que cada endereço entrega.</h2>
  <div class="cols"><div><h3>Infraestrutura pronta</h3><p>Estância das Águas com obras concluídas. Estância Casa Real com infraestrutura concluída.</p></div>
  <div><h3>Escritura imediata</h3><p>Na Estância Casa Real, lote liberado para construir.</p></div>
  <div><h3>Área verde</h3><p>Mais de 11 mil m² na Estância Queiroz de Melo e 16 mil m² na Estância Casa Real.</p></div>
@@ -279,17 +279,17 @@ home:()=>`<div class="w lead-band"><h1>Três endereços. Um só padrão de excel
 ${cta('')}`,
 empreendimentos:()=>`<div class="w lead-band"><h1>Empreendimentos</h1><p>Três endereços com o mesmo padrão Queiroz de Melo.</p></div>${tri()}${cmp()}<div style="height:clamp(80px,9vw,130px)"></div>${cta('')}`,
 sobre:()=>`<section class="cover" style="height:72svh">${im(EMP[0].fotos[4],'Estância Queiroz de Melo')}<div class="w in"><span class="cap">Nossa história</span><span class="rule"></span><h1>Desde 1999.</h1></div></section>
-<section class="w ficha"><div><span class="cap" style="color:var(--gold)">Quem somos</span><span class="rule"></span><h2>Grandes empreendimentos nas cidades onde atuamos.</h2></div><div><p class="lead">Fundada em 6 de julho de 1999, a Queiroz de Melo Empreendimentos é conhecida por projetos de excelência.</p><p style="color:var(--mute)">Preocupação com o impacto ambiental e pontualidade nas entregas fazem parte de cada projeto. Nosso compromisso é com a satisfação dos clientes, o retorno aos investidores e o desenvolvimento das cidades.</p>
+<section class="w ficha"><div><span class="cap" style="color:var(--goldt)">Quem somos</span><span class="rule"></span><h2>Grandes empreendimentos nas cidades onde atuamos.</h2></div><div><p class="lead">Fundada em 6 de julho de 1999, a Queiroz de Melo Empreendimentos é conhecida por projetos de excelência.</p><p style="color:var(--mute)">Preocupação com o impacto ambiental e pontualidade nas entregas fazem parte de cada projeto. Nosso compromisso é com a satisfação dos clientes, o retorno aos investidores e o desenvolvimento das cidades.</p>
  <dl><div><dt>Visão</dt><dd>Ser reconhecida pela qualidade que imprimimos em tudo o que fazemos.</dd></div><div><dt>Valores</dt><dd>Respeito às pessoas e ao meio ambiente, atuação responsável, transparência, foco no resultado, qualidade e inovação.</dd></div></dl></div></section>${cta('')}`,
-contato:()=>`<section class="w loc" style="padding-top:clamp(70px,8vw,120px)"><div><span class="cap" style="color:var(--gold)">Fale conosco</span><span class="rule"></span><h1 style="font-size:clamp(42px,5vw,76px);color:var(--g)">Vamos agendar sua visita.</h1><p style="margin-top:24px;color:var(--mute);max-width:40ch">Deixe seu contato e nossa equipe retorna. Se preferir, fale direto pelo WhatsApp ou por telefone.</p></div>${form('')}</section>${cta('')}`
+contato:()=>`<section class="w loc" style="padding-top:clamp(70px,8vw,120px)"><div><span class="cap" style="color:var(--goldt)">Fale conosco</span><span class="rule"></span><h1 style="font-size:clamp(42px,5vw,76px);color:var(--g)">Vamos agendar sua visita.</h1><p style="margin-top:24px;color:var(--mute);max-width:40ch">Deixe seu contato e nossa equipe retorna. Se preferir, fale direto pelo WhatsApp ou por telefone.</p></div>${form('')}</section>${cta('')}`
 };
 const emp=e=>`<section class="ehero">${im(e.fotos[0],full(e))}<div class="w in"><span class="cap" style="color:#dfe6e0;display:block;margin-bottom:18px">${e.cidade}</span>${lock(e)}</div></section>
-<section class="w ficha"><div><span class="cap" style="color:var(--gold)">Ficha técnica</span><span class="rule"></span><h2>${full(e)}</h2><dl>
+<section class="w ficha"><div><span class="cap" style="color:var(--goldt)">Ficha técnica</span><span class="rule"></span><h2>${full(e)}</h2><dl>
  <div><dt>Cidade</dt><dd>${e.cidade}</dd></div><div><dt>Endereço</dt><dd>${e.end}</dd></div><div><dt>Status</dt><dd>${e.status||TBD}</dd></div><div><dt>Metragem</dt><dd>${e.metr}</dd></div><div><dt>Lotes</dt><dd>${TBD}</dd></div><div><dt>Implantação</dt><dd>${TBD}</dd></div></dl></div>
  <div style="align-self:end"><p class="lead">${e.frase}</p><p style="color:var(--mute)">${e.texto}</p><a class="btn" style="color:var(--g);margin-top:12px" href="${wa(full(e))}">Agendar visita</a></div></section>
 <section class="w mos">${im(e.fotos[1],full(e),'a')}${im(e.fotos[2],full(e),'b')}${im(e.fotos[3],full(e),'c')}${im(e.fotos[4],full(e),'d')}</section>
 <section class="laz"><div class="w grid"><div><span class="cap">Lazer e diferenciais</span><span class="rule"></span><h2>Tudo dentro do seu endereço.</h2></div><ul>${e.lazer.map(x=>`<li>${x}</li>`).join('')}</ul></div></section>
-<section class="w loc"><div><span class="cap" style="color:var(--gold)">Localização</span><span class="rule"></span><h2>${e.end}</h2><p style="margin-top:14px;color:var(--mute)">${e.cidade}</p><a class="uline" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.end+', '+e.cidade)}">Abrir no mapa</a>${e.ig?`<p style="margin-top:22px"><a class="uline" href="${e.ig}">Siga no Instagram @estanciacasareal</a></p>`:''}</div>${form(e.id)}</section><div class="w cmp-h" style="padding-top:0"><h2>Conheça também.</h2></div><section class="also">${EMP.filter(x=>x!==e).map(pan).join('')}</section>${cta(full(e))}`;
+<section class="w loc"><div><span class="cap" style="color:var(--goldt)">Localização</span><span class="rule"></span><h2>${e.end}</h2><p style="margin-top:14px;color:var(--mute)">${e.cidade}</p><a class="uline" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.end+', '+e.cidade)}">Abrir no mapa</a>${e.ig?`<p style="margin-top:22px"><a class="uline" href="${e.ig}">Siga no Instagram @estanciacasareal</a></p>`:''}</div>${form(e.id)}</section><div class="w cmp-h" style="padding-top:0"><h2>Conheça também.</h2></div><section class="also">${EMP.filter(x=>x!==e).map(pan).join('')}</section>${cta(full(e))}`;
 const app=document.getElementById('app'),hd=document.getElementById('hd'),mn=document.getElementById('mnav'),bg=document.getElementById('bg');
 function show(){const h=location.hash.slice(1)||'home';const e=EMP.find(x=>x.id===h);app.innerHTML=e?emp(e):(V[h]||V.home)();
  const k=e?'empreendimentos':(V[h]?h:'home');document.querySelectorAll('nav.main a').forEach(a=>a.classList.toggle('on',a.dataset.k===k));
