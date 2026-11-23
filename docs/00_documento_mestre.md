@@ -33,11 +33,12 @@ Nenhum código antes de fechar as etapas de 00 a 08.
 D01 (23/11/2026): o projeto segue o método de trabalho do app-agro.
 D02 (23/11/2026): repositório criado em github.com/Victorluccio/Site-queiroz-de-melo.
 D03 (23/11/2026): do app-agro vem só o método de trabalho. O processo de entrega (03) será escrito do zero para este projeto, no mesmo padrão de uma empresa de desenvolvimento.
+D04 (23/11/2026): site atual da empresa em queirozdemelo.com.br. Página de referência informada: queirozdemelo.com.br/empreedimentos/estancia-das-aguas/
 
 ## Pontos em aberto
 
-1. Endereço do site atual da Queiroz de Melo.
+Nenhum ponto em aberto nesta etapa.
 
 ## Próximo passo
 
-Aprovar este documento e abrir a etapa 01.
+Aprovar este documento e abrir a etapa 01 (análise do site atual).
