@@ -97,3 +97,4 @@ Pedido do Victor: renovar a marca sem mudar o desenho do logo.
 3. O logo foi recolorido a partir do print do site atual. Para uso real, a repaginada deve ser refeita sobre o arquivo vetorial original e aprovada pelo cliente.
 
 Ajuste da repaginada (23/11/2026): todos os verdes mais escuros (logo e site em #004a1f, faixas em #00340f). Dourado em lâmina de ouro com degradê vertical, escuro embaixo e claro em cima, no logo e nos botões e filetes do site.
+Ajuste da repaginada (23/11/2026): dourado com textura de ouro líquido (reflexos e dobras, do marrom-dourado escuro ao amarelo claro), seguindo a referência enviada pelo Victor. A textura foi gerada no projeto (prototipo/img/ouro.jpg), sem usar a imagem de referência, e aplicada no brasão, nos filetes e no botão dourado.
