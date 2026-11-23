@@ -101,3 +101,22 @@ Ajuste da repaginada (23/11/2026): dourado com textura de ouro líquido (reflexo
 Ajuste da repaginada (23/11/2026): brasão em ouro polido e liso, escuro embaixo e bem iluminado em cima, com relevo leve nas bordas (luz vindo de cima) para dar sensação de peça de metal. Mesmo degradê no botão dourado do site.
 Ajuste da repaginada (23/11/2026): ouro mais amarelo e brilhante, no tom da referência enviada pelo Victor (ouro polido com reflexos). Mantido o escuro embaixo e o claro em cima, com faixas de reflexo para dar brilho de metal.
 Decisão (23/11/2026): o logo volta ao original, sem repaginada de cores. Usado o print novo enviado pelo Victor, com melhor resolução. Os arquivos da repaginada ficam guardados (logo-queiroz-de-melo-novo.png e docs/img/logo-antes-depois.png) caso o assunto volte na reunião.
+
+## Versão 5 (23/11/2026): novo front completo
+
+Motivo: o Victor achou o protótipo parecido demais com o site atual (fundo branco, faixa verde, cartões). Pediu mudança de impacto, preservando o logo, os três empreendimentos com o mesmo peso, o Instagram e a marca d'água.
+
+Pesquisa: premiados do Awwwards em imobiliário e luxo (2026), estudos de caso da Vide Infra (ERA, AIR, Silver Pinewood), análises da DesignRush (Diamond Realty, Pantheon, Luxury Marketing Council) e casos de lançamentos de loteamentos no Brasil.
+
+O que foi aplicado:
+1. Modo escuro de luxo a partir da própria marca: verde-noite como fundo, ouro do brasão em filetes e destaques, texto marfim. Rompe com o branco do site atual.
+2. Abertura animada: o logo aparece numa placa marfim, um filete de ouro se desenha e a tela se abre.
+3. Logo sempre numa placa marfim, para manter o desenho e as cores originais sobre o fundo escuro.
+4. Tríptico de tela cheia com o título "Três endereços. Um só padrão." sobre os três. Ao passar o mouse, o empreendimento escolhido acende e os outros escurecem, sem mudar de tamanho.
+5. Números que contam ao aparecer (1999, 3 empreendimentos, áreas verdes).
+6. Mapa do território desenhado ao rolar: rota em ouro ligando Barretos a Patos de Minas, com os pontos acendendo.
+7. Galeria horizontal presa à tela: ao rolar para baixo, as fotos correm para o lado, alternando os três empreendimentos.
+8. Tabela lado a lado com o logo de cada empreendimento no topo de cada coluna.
+9. Barra de progresso em ouro no topo da tela, menu com sublinhado animado, botão "Agendar visita" sempre visível.
+10. Entradas suaves dos blocos e revelação das fotos ao rolar.
+11. Rodapé novo, sem o padrão "copyright e desenvolvido por" do site atual.

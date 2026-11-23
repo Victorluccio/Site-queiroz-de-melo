@@ -55,6 +55,7 @@ D22 (23/11/2026): versão 3 do protótipo com a marca e as cores do cliente, tip
 D23 (23/11/2026): os três empreendimentos sempre com o mesmo peso, lado a lado, nunca empilhados. Versão 4 com tríptico e comparação lado a lado.
 D24 (23/11/2026): proposta de repaginada da marca só nas cores (desenho do logo mantido): verde mais forte, dourado em lâmina de ouro, vermelho mais vivo e textos mais fortes no site.
 D25 (23/11/2026): logo volta ao original no protótipo. A repaginada fica guardada como opção.
+D26 (23/11/2026): versão 5 com front totalmente novo em modo escuro, abertura animada, mapa do território, galeria horizontal e números animados. Preservados logo, peso igual dos três empreendimentos, Instagram e marca d'água.
 
 ## Pontos em aberto
 
@@ -74,4 +75,4 @@ Para confirmar com o cliente (não travam o demonstrativo):
 
 ## Próximo passo
 
-Victor revisar a versão 4 do protótipo e aprovar a etapa 07.
+Victor revisar a versão 5 do protótipo e aprovar a etapa 07.
