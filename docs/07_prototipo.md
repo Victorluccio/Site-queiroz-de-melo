@@ -29,3 +29,18 @@ Na construção do demonstrativo, as fotos reais entram no lugar das ilustraçõ
 1. Visual geral (cores, fontes, espaçamento).
 2. Ordem das seções da Home.
 3. Modelo da página de empreendimento.
+
+## Versão 2 (23/11/2026)
+
+Motivo: a versão 1 ficou com cara de layout genérico de IA.
+Mudanças, com base no complemento da etapa 02:
+1. Ilustrações removidas. O protótipo usa só as fotos reais do site atual, em tela cheia.
+2. Menu discreto: logo e botão "Menu" que abre a tela inteira.
+3. Paleta em branco, quase-preto e cinza pedra. A cor vem das fotos.
+4. Títulos em Libre Caslon Display e texto em Archivo leve.
+5. Empreendimentos em lista editorial, com o nome grande e a foto aparecendo ao passar o mouse.
+6. Grade assimétrica de 12 colunas, sem cards e sem faixa de números.
+7. Contato com a chamada "Agende uma visita".
+8. Página de empreendimento com ficha técnica em linhas finas e mosaico de fotos.
+
+As fotos ficam na pasta prototipo/img, com o mesmo nome do arquivo no site atual.

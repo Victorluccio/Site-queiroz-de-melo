@@ -48,6 +48,7 @@ D15 (23/11/2026): repositório passa a ser privado.
 D16 (23/11/2026): revisão interna do demonstrativo por link privado do Claude. O link para o cliente será definido antes da apresentação.
 D17 (23/11/2026): etapa 06 aprovada.
 D18 (23/11/2026): protótipo com ilustrações no lugar das fotos, porque o ambiente de revisão não carrega imagens externas.
+D19 (23/11/2026): versão 1 do protótipo reprovada por ter cara de IA. Versão 2 refeita com padrões de sites de alto padrão do Brasil e só com fotos reais.
 
 ## Pontos em aberto
 
@@ -66,4 +67,4 @@ Para confirmar com o cliente (não travam o demonstrativo):
 
 ## Próximo passo
 
-Revisar e aprovar o protótipo (etapa 07).
+Receber as 15 fotos do Victor, publicar a versão 2 do protótipo e revisar.
