@@ -18,7 +18,7 @@ O novo site será levado ao cliente como demonstrativo visual na prospecção.
 | 01 | Referência: análise do site atual da Queiroz de Melo | Aprovada em 23/11/2026 |
 | 02 | Referência: sites de incorporadoras de alto padrão | Aprovada em 23/11/2026 |
 | 03 | Processo de entrega | Aprovada em 23/11/2026 |
-| 04 | Escopo: páginas, funções e o que fica fora | Em andamento |
+| 04 | Escopo: páginas, funções e o que fica fora | Aguardando aprovação |
 | 05 | Conteúdo: mapa do site, textos, fotos e dados de cada empreendimento | Pendente |
 | 06 | Arquitetura: tecnologia, hospedagem, domínio, painel de edição, formulários, SEO | Pendente |
 | 07 | Protótipo navegável | Pendente |
@@ -39,7 +39,8 @@ D06 (23/11/2026): etapa 01 aprovada.
 D07 (23/11/2026): referências da etapa 02 são Alphaville Urbanismo, JHSF e Granja Marileusa.
 D08 (23/11/2026): etapa 02 aprovada.
 D09 (23/11/2026): etapa 03 aprovada.
-D10 (23/11/2026): a entrega agora é um demonstrativo para a prospecção (home e uma página de empreendimento), feito só com dados públicos do site atual. O site completo fica para depois da contratação.
+D10 (23/11/2026): a entrega agora é um demonstrativo para a prospecção, feito só com dados públicos do site atual. O site completo fica para depois da contratação.
+D11 (23/11/2026): o demonstrativo representa a empresa e apresenta os três empreendimentos. O objetivo é gerar desejo no cliente.
 
 ## Pontos em aberto
 
@@ -51,4 +52,4 @@ Para confirmar com o cliente (levantados na etapa 01):
 
 ## Próximo passo
 
-Fechar as definições da etapa 04 (escopo).
+Aprovar a etapa 04 e abrir a etapa 05 (conteúdo).
