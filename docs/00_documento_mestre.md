@@ -56,6 +56,7 @@ D23 (23/11/2026): os três empreendimentos sempre com o mesmo peso, lado a lado,
 D24 (23/11/2026): proposta de repaginada da marca só nas cores (desenho do logo mantido): verde mais forte, dourado em lâmina de ouro, vermelho mais vivo e textos mais fortes no site.
 D25 (23/11/2026): logo volta ao original no protótipo. A repaginada fica guardada como opção.
 D26 (23/11/2026): versão 5 com front totalmente novo em modo escuro, abertura animada, mapa do território, galeria horizontal e números animados. Preservados logo, peso igual dos três empreendimentos, Instagram e marca d'água.
+D27 (24/11/2026): demonstrativo publicado no Netlify em queirozdemelo-proposta.netlify.app, público para quem tem o link.
 
 ## Pontos em aberto
 

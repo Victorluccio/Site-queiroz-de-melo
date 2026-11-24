@@ -122,3 +122,9 @@ O que foi aplicado:
 11. Rodapé novo, sem o padrão "copyright e desenvolvido por" do site atual.
 Ajuste (23/11/2026): o mapa do território passou a mostrar o contorno real de Minas Gerais e São Paulo em linha dourada, desenhado ao rolar. Depois a rota liga Barretos a Patos de Minas e os pontos acendem. Contornos tirados da base pública brazil-states.geojson (projeto click_that_hood, Code for Germany) e simplificados para o site.
 Ajuste (23/11/2026): versão para celular revista. No celular, os três empreendimentos aparecem juntos na primeira tela, em três faixas do mesmo tamanho (logo à esquerda, nome, cidade e status à direita). A tabela lado a lado mostra as três colunas sem rolagem lateral. O mapa ocupa a largura toda, com nomes maiores. No tablet e no computador, o tríptico continua em três colunas.
+
+## Publicação do demonstrativo (24/11/2026)
+
+Link para o cliente: https://queirozdemelo-proposta.netlify.app
+Publicado no Netlify, na conta do Victor, com acesso público para quem tiver o endereço. Bloqueado para buscas (noindex).
+Para atualizar: no projeto queirozdemelo-proposta do Netlify, usar "Drop new files" com o zip novo. O endereço continua o mesmo.
